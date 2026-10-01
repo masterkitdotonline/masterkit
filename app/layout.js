@@ -15,9 +15,68 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Calculator - Free Online Calculators & Tools",
+  metadataBase: new URL("https://masterkit.online"),
+
+  title: {
+    default: "MasterKit - Free Online Tools & Calculators",
+    template: "%s | MasterKit",
+  },
+
   description:
-    "Free online calculators and useful tools for math, finance, health, YouTube, images, text, SEO and more.",
+    "MasterKit offers free online tools and calculators including BMI Calculator, Loan Calculator, Percentage Calculator, Image Resizer, Word Counter, JSON Formatter and more.",
+
+  keywords: [
+    "free online tools",
+    "online calculators",
+    "BMI calculator",
+    "loan calculator",
+    "percentage calculator",
+    "area calculator",
+    "compound interest calculator",
+    "image resizer",
+    "word counter",
+    "JSON formatter",
+    "YouTube thumbnail downloader",
+    "developer tools",
+    "SEO tools",
+  ],
+
+  authors: [{ name: "MasterKit" }],
+  creator: "MasterKit",
+  publisher: "MasterKit",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://masterkit.online",
+    siteName: "MasterKit",
+    title: "MasterKit - Free Online Tools & Calculators",
+    description:
+      "Free online calculators and useful tools for math, finance, health, images, text, YouTube, developer tasks and SEO.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "MasterKit - Free Online Tools & Calculators",
+    description:
+      "Free online tools and calculators for everyday tasks. No signup required.",
+  },
+
+  alternates: {
+    canonical: "https://masterkit.online",
+  },
 };
 
 export default function RootLayout({ children }) {
