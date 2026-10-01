@@ -85,9 +85,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
-      <meta name="cpmbid-site-verification" content="dd3beca97e9a3851e770c9326a30ba56">
-      </head>
+     
       <body className="min-h-full flex flex-col">
         <Header />
 
