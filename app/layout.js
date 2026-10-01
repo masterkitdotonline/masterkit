@@ -77,10 +77,12 @@ export const metadata = {
   alternates: {
     canonical: "https://masterkit.online",
   },
-   verification: {
+
+  verification: {
     other: {
       "cpmbid-site-verification": "dd3beca97e9a3851e770c9326a30ba56",
     },
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -89,7 +91,6 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-     
       <body className="min-h-full flex flex-col">
         <Header />
 
