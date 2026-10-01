@@ -89,10 +89,31 @@ export default function Hero() {
 
           
 
-<div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
-          <iframe data-aa='2457056' src='//acceptable.a-ads.com/2457056/?size=Adaptive'
-                            style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-        </div>
+{/* Advertisement */}
+<div className="my-8 flex justify-center">
+  <div
+    id="frame"
+    style={{
+      width: "100%",
+      maxWidth: "728px",
+      margin: "auto",
+      position: "relative",
+    }}
+  >
+    <iframe
+      data-aa="2457056"
+      src="https://acceptable.a-ads.com/2457056/?size=Adaptive"
+      style={{
+        border: 0,
+        padding: 0,
+        width: "100%",
+        minHeight: "90px",
+        display: "block",
+        margin: "auto",
+      }}
+    />
+  </div>
+</div>
 
 
 
