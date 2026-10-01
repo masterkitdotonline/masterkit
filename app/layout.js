@@ -81,6 +81,7 @@ export const metadata = {
   verification: {
     other: {
       "cpmbid-site-verification": "dd3beca97e9a3851e770c9326a30ba56",
+      "google-site-verification": "fD-C06qtXQ848IiOwYm8fvd_7KGiKsGILCQQF2Dm800"
     },
   },
 };
