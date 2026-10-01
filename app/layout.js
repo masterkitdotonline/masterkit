@@ -77,6 +77,10 @@ export const metadata = {
   alternates: {
     canonical: "https://masterkit.online",
   },
+   verification: {
+    other: {
+      "cpmbid-site-verification": "dd3beca97e9a3851e770c9326a30ba56",
+    },
 };
 
 export default function RootLayout({ children }) {
