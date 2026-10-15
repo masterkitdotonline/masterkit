@@ -65,7 +65,7 @@ export default function Footer() {
               className="flex items-center gap-2"
             >
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white text-sm font-bold text-black">
-                M
+                <img src="./logo.png" alt="masterkit" />
               </div>
 
               <span className="text-lg font-bold text-white">
@@ -80,7 +80,7 @@ export default function Footer() {
 
             <Link
               href="/tools"
-              className="mt-5 inline-flex rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-gray-900 transition hover:bg-gray-200"
+              className="mt-5 inline-flex rounded-lg bg-white px-4 py-2.5 text-sm font-semibold !text-gray-900 transition hover:bg-gray-200"
             >
               Explore Tools
             </Link>
@@ -109,6 +109,9 @@ export default function Footer() {
                 >
                   All Tools
                 </Link>
+              </li>
+              <li>
+               
               </li>
 
               <li>

@@ -3,6 +3,8 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AdsteraBanner from "@/components/AdsteraBanner";
+import AdsteraPopunder from "@/components/AdsteraPopunder";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -94,11 +96,12 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Header />
+        {/* <AdsteraPopunder /> */}
 
         <main className="flex-1">
           {children}
         </main>
-
+        <AdsteraBanner />
         <Footer />
       </body>
     </html>

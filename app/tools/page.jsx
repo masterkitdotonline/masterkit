@@ -12,6 +12,7 @@ import {
   Code2,
   ArrowRight,
 } from "lucide-react";
+import AdsteraBanner from "@/components/AdsteraBanner";
 
 const tools = [
   {
@@ -78,6 +79,30 @@ const tools = [
     icon: Code2,
     href: "/tools/json-formatter",
   },
+  {
+    name: "Lorem Ipsum Generator",
+    description:
+      "Generate placeholder text for websites, designs, prototypes and development projects.",
+    category: "Text",
+    icon: FileText,
+    href: "/tools/lorem-ipsum-generator",
+  },
+  {
+    name: "Calorie Calculator",
+    description:
+      "Calculate your estimated daily calorie needs based on your age, body measurements and activity level.",
+    category: "Health",
+    icon: HeartPulse,
+    href: "/tools/calorie-calculator",
+  },
+  {
+    name: "Discount Calculator",
+    description:
+      "Calculate discounts, final prices and savings quickly and easily.",
+    category: "Finance",
+    icon: Wallet,
+    href: "/tools/discount-calculator",
+  },
 ];
 
 const categories = [
@@ -132,11 +157,10 @@ export default function Tools() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
-                  isActive
-                    ? "border-black bg-black text-white"
-                    : "border-gray-200 bg-white text-gray-600 hover:border-gray-300 hover:bg-gray-100"
-                }`}
+                className={`rounded-full border px-4 py-2 text-sm font-medium transition ${isActive
+                  ? "border-black bg-black text-white"
+                  : "border-gray-200 bg-white text-gray-600 hover:border-gray-300 hover:bg-gray-100"
+                  }`}
               >
                 {category}
               </button>
@@ -220,6 +244,7 @@ export default function Tools() {
           </div>
         )}
       </section>
+      
     </main>
   );
 }

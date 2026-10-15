@@ -10,6 +10,7 @@ import {
   Search,
   Code2
 } from "lucide-react";
+import AdsteraBanner from "./AdsteraBanner";
 
 const popularTools = [
   {
@@ -33,7 +34,7 @@ const popularTools = [
     category: "Developer",
     description: "Format, validate, minify and beautify JSON online for free. Everything runs directly in your browser.",
   },
-  
+
   {
     name: "Loan Calculator",
     description: "Calculate monthly payments and total interest.",
@@ -87,46 +88,53 @@ export default function Hero() {
             SEO and many more everyday tasks.
           </p>
 
-          
 
-{/* Advertisement */}
-<div className="my-8 flex justify-center">
-  <div
-    id="frame"
-    style={{
-      width: "100%",
-      maxWidth: "728px",
-      margin: "auto",
-      position: "relative",
-    }}
-  >
-    <iframe
-      data-aa="2457056"
-      src="https://acceptable.a-ads.com/2457056/?size=Adaptive"
-      style={{
-        border: 0,
-        padding: 0,
-        width: "100%",
-        minHeight: "90px",
-        display: "block",
-        margin: "auto",
-      }}
-    />
-  </div>
-</div>
+
+          {/* Advertisement */}
+          <div className="my-8 flex justify-center">
+            <div
+              id="frame"
+              style={{
+                width: "100%",
+                maxWidth: "728px",
+                margin: "auto",
+                position: "relative",
+              }}
+            >
+              <iframe
+                data-aa="2457056"
+                src="https://acceptable.a-ads.com/2457056/?size=Adaptive"
+                style={{
+                  border: 0,
+                  padding: 0,
+                  width: "100%",
+                  minHeight: "90px",
+                  display: "block",
+                  margin: "auto",
+                }}
+              />
+            </div>
+          </div>
 
 
 
           <div className="mt-8 flex justify-center">
             <Link
               href="/tools"
-              className="inline-flex items-center gap-2 rounded-xl bg-black px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-gray-800"
+              className="inline-flex items-center gap-2 rounded-xl bg-black px-6 py-3.5 text-sm font-semibold !text-white transition hover:bg-gray-800"
             >
               Explore All Tools
               <ArrowRight size={17} />
             </Link>
           </div>
+          
+
+          
+
+
         </div>
+
+        <AdsteraBanner />
 
         {/* Popular Tools */}
         <div className="mt-20">

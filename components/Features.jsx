@@ -6,6 +6,7 @@ import {
   MousePointerClick,
   RefreshCw,
 } from "lucide-react";
+import AdsteraBanner from "./AdsteraBanner";
 
 const features = [
   {
@@ -96,6 +97,7 @@ export default function Features() {
           })}
         </div>
       </div>
+      
     </section>
   );
 }
