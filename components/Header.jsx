@@ -148,6 +148,13 @@ export default function Header() {
             All Tools
           </Link>
 
+          <Link
+            href="/scripts"
+            className="rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+          >
+            Scripts
+          </Link>
+
           
         </nav>
 
@@ -202,12 +209,24 @@ export default function Header() {
             </Link>
 
             <Link
+              href="/scripts"
+              onClick={closeMenus}
+              className="block rounded-lg px-3 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"
+            >
+              Scripts
+            </Link>
+
+            <Link
               href="/tools"
               onClick={closeMenus}
               className="block rounded-lg px-3 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"
             >
               All Tools
             </Link>
+
+            
+
+            
 
             
 
