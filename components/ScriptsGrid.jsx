@@ -13,6 +13,26 @@ const scripts = [
     driveUrl: "https://drive.google.com/file/d/17ANqV6qredCMBjCQ9BoQrzWUgmf9wSRb/view?usp=drive_link",
     monetagUrl: "https://uplcm.com/4/12059580",
   },
+  {
+    id: 2,
+    title: "Ocean Eater – HTML5 Mobile Fish Survival Game Source Code",
+    description:
+      "A complete, mobile-friendly underwater survival game built with HTML, CSS, and JavaScript in a single index.html file. Players eat smaller fish to grow, avoid larger predators, unlock new growth levels, and explore a colorful underwater world. Includes AI fish, touch joystick controls, boost mechanics, missions, score tracking, and responsive mobile gameplay. Ideal for developers who want to customize the game or convert it into an Android app using AppCreator24.",
+    image:
+      "https://i.ibb.co/wNBhJztV/Ocean-Eater-Rule-the-Reef.png",
+    driveUrl: "https://drive.google.com/file/d/16x8afVjwQIvtZ-tgf5tuLjxspgseegyl/view?usp=drive_link",
+    monetagUrl: "https://uplcm.com/4/12059580",
+  },
+  {
+    id: 3,
+    title: "Slither-Style Snake Arena Game Source Code",
+    description:
+      "Create a fun, colorful, mobile-friendly snake arena game using HTML, CSS, and JavaScript in a single index.html file. Features include AI snakes, food collection, snake growth, power-ups, coins, missions, a minimap, leaderboards, and responsive touch controls.",
+    image:
+      "https://i.ibb.co/Vcsq7tPk/Glossy-Purple-Worm-Arcade-Adventure.png",
+    driveUrl: "https://drive.google.com/file/d/1xh8hiB-Uk22YLXXjZ4YVHwEmPOTMQA21/view?usp=drive_link",
+    monetagUrl: "https://uplcm.com/4/12059580",
+  },
   
 ];
 
