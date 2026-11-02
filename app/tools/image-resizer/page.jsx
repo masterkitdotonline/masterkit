@@ -1,5 +1,6 @@
 
 import ImageResizer from "./ImageResizer&Compressor";
+import AdSlot from "@/components/AdSlot";
 
 
 export const metadata = {
@@ -9,5 +10,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <ImageResizer />;
+  return (
+    <>
+      <ImageResizer />
+      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
+    </>
+  );
 }

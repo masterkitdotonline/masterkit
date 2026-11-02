@@ -1,4 +1,5 @@
 import CalorieCalculator from "./CalorieCalculator";
+import AdSlot from "@/components/AdSlot";
 
 export const metadata = {
   title: "Calorie Calculator",
@@ -21,5 +22,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <CalorieCalculator />;
+  return (
+    <>
+      <CalorieCalculator />
+      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
+    </>
+  );
 }

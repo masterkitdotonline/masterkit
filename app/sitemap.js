@@ -47,7 +47,7 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/tools/image-compressor`,
+      url: `${baseUrl}/tools/image-resizer`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
@@ -89,7 +89,37 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/tools/calorie-calculator`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/tools/discount-calculator`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/tools/word-counter`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/tools/lorem-ipsum-generator`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/tools/mathkit`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/tools/negative-marks-calculator`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,

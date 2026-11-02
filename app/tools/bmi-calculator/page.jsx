@@ -1,4 +1,5 @@
 import BMICalculator from "./BMICalculator";
+import AdSlot from "@/components/AdSlot";
 
 
 export const metadata = {
@@ -8,5 +9,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <BMICalculator />;
+  return (
+    <>
+      <BMICalculator />
+      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
+    </>
+  );
 }

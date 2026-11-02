@@ -8,13 +8,13 @@ export default function PrivacyPage() {
   return (
     <main className="bg-white">
       {/* Hero */}
-      <section className="border-b bg-gray-50">
+      <section className="border-b bg-slate-50">
         <div className="mx-auto max-w-4xl px-6 py-16 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             Privacy Policy
           </h1>
 
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-slate-600">
             Last updated: September 2026
           </p>
         </div>
@@ -22,10 +22,10 @@ export default function PrivacyPage() {
 
       {/* Content */}
       <section className="mx-auto max-w-4xl px-6 py-14">
-        <div className="space-y-10 leading-7 text-gray-600">
+        <div className="space-y-10 leading-7 text-slate-600">
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               1. Introduction
             </h2>
 
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               2. Information We Collect
             </h2>
 
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               3. How We Use Information
             </h2>
 
@@ -82,7 +82,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               4. Cookies
             </h2>
 
@@ -100,7 +100,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               5. Google AdSense and Advertising
             </h2>
 
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               6. Third-Party Services
             </h2>
 
@@ -141,7 +141,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               7. Calculator and Tool Data
             </h2>
 
@@ -159,7 +159,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               8. Children's Privacy
             </h2>
 
@@ -171,7 +171,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               9. Data Security
             </h2>
 
@@ -184,7 +184,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               10. External Links
             </h2>
 
@@ -197,7 +197,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               11. Changes to This Privacy Policy
             </h2>
 
@@ -209,7 +209,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               12. Contact Us
             </h2>
 
@@ -218,7 +218,7 @@ export default function PrivacyPage() {
               practices, please visit our{" "}
               <a
                 href="/contact"
-                className="font-medium text-gray-900 underline underline-offset-4"
+                className="font-medium text-slate-900 underline underline-offset-4"
               >
                 Contact Us
               </a>{" "}

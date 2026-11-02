@@ -256,15 +256,15 @@ export default function ImageResizer() {
     <div className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
       {/* Hero */}
       <div className="mb-8 text-center">
-        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white">
+        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 text-white shadow-lg ring-4 ring-violet-100">
           <ImageIcon size={28} />
         </div>
 
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
           Image Resizer & Compressor
         </h1>
 
-        <p className="mx-auto mt-3 max-w-2xl text-gray-600">
+        <p className="mx-auto mt-3 max-w-2xl text-slate-600">
           Resize and compress your images directly in your browser.
           No signup and no image upload to a server.
         </p>
@@ -275,21 +275,21 @@ export default function ImageResizer() {
         <div className="mx-auto max-w-3xl">
           <label
             htmlFor="image-upload"
-            className="flex min-h-[280px] cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed border-gray-300 bg-white p-8 text-center transition hover:border-blue-500 hover:bg-blue-50/30"
+            className="flex min-h-[280px] cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 bg-white p-8 text-center transition hover:border-indigo-500 hover:bg-indigo-50/30"
           >
-            <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
+            <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600">
               <Upload size={30} />
             </div>
 
-            <h2 className="text-xl font-semibold text-gray-900">
+            <h2 className="text-xl font-semibold text-slate-900">
               Upload an Image
             </h2>
 
-            <p className="mt-2 text-sm text-gray-500">
+            <p className="mt-2 text-sm text-slate-500">
               Click to select JPG, PNG, WebP or another image
             </p>
 
-            <p className="mt-1 text-xs text-gray-400">
+            <p className="mt-1 text-xs text-slate-400">
               Maximum file size: 25 MB
             </p>
 
@@ -315,14 +315,14 @@ export default function ImageResizer() {
       {image && (
         <div className="grid gap-6 lg:grid-cols-5">
           {/* Preview */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm lg:col-span-3">
+          <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm lg:col-span-3">
             <div className="mb-4 flex items-center justify-between gap-3">
               <div>
-                <h2 className="font-semibold text-gray-900">
+                <h2 className="font-semibold text-slate-900">
                   Image Preview
                 </h2>
 
-                <p className="mt-1 text-xs text-gray-500">
+                <p className="mt-1 text-xs text-slate-500">
                   {fileName}
                 </p>
               </div>
@@ -330,14 +330,14 @@ export default function ImageResizer() {
               <button
                 type="button"
                 onClick={reset}
-                className="flex items-center gap-2 rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                className="flex items-center gap-2 rounded-lg border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
               >
                 <RotateCcw size={16} />
                 Reset
               </button>
             </div>
 
-            <div className="flex min-h-[300px] items-center justify-center overflow-hidden rounded-xl bg-gray-100 p-4">
+            <div className="flex min-h-[300px] items-center justify-center overflow-hidden rounded-xl bg-slate-100 p-4">
               <img
                 src={previewUrl || image.src}
                 alt="Uploaded image preview"
@@ -346,20 +346,20 @@ export default function ImageResizer() {
             </div>
 
             <div className="mt-4 grid grid-cols-2 gap-3">
-              <div className="rounded-xl bg-gray-50 p-3">
-                <p className="text-xs text-gray-500">
+              <div className="rounded-xl bg-slate-50 p-3">
+                <p className="text-xs text-slate-500">
                   Original Size
                 </p>
-                <p className="mt-1 font-semibold text-gray-900">
+                <p className="mt-1 font-semibold text-slate-900">
                   {formatBytes(originalSize)}
                 </p>
               </div>
 
-              <div className="rounded-xl bg-gray-50 p-3">
-                <p className="text-xs text-gray-500">
+              <div className="rounded-xl bg-slate-50 p-3">
+                <p className="text-xs text-slate-500">
                   Dimensions
                 </p>
-                <p className="mt-1 font-semibold text-gray-900">
+                <p className="mt-1 font-semibold text-slate-900">
                   {image.width} × {image.height}
                 </p>
               </div>
@@ -367,14 +367,14 @@ export default function ImageResizer() {
           </div>
 
           {/* Controls */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm lg:col-span-2">
-            <h2 className="mb-5 text-xl font-semibold text-gray-900">
+          <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm lg:col-span-2">
+            <h2 className="mb-5 text-xl font-semibold text-slate-900">
               Resize & Compress
             </h2>
 
             {/* Width */}
             <div className="mb-4">
-              <label className="mb-2 block text-sm font-medium text-gray-700">
+              <label className="mb-2 block text-sm font-medium text-slate-700">
                 Width (px)
               </label>
 
@@ -386,13 +386,13 @@ export default function ImageResizer() {
                 onChange={(e) =>
                   handleWidthChange(e.target.value)
                 }
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
               />
             </div>
 
             {/* Height */}
             <div className="mb-4">
-              <label className="mb-2 block text-sm font-medium text-gray-700">
+              <label className="mb-2 block text-sm font-medium text-slate-700">
                 Height (px)
               </label>
 
@@ -404,7 +404,7 @@ export default function ImageResizer() {
                 onChange={(e) =>
                   handleHeightChange(e.target.value)
                 }
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
               />
             </div>
 
@@ -412,7 +412,7 @@ export default function ImageResizer() {
             <button
               type="button"
               onClick={() => setAspectLocked(!aspectLocked)}
-              className="mb-5 flex items-center gap-2 text-sm font-medium text-blue-600"
+              className="mb-5 flex items-center gap-2 text-sm font-medium text-indigo-600"
             >
               {aspectLocked ? (
                 <Lock size={17} />
@@ -427,14 +427,14 @@ export default function ImageResizer() {
 
             {/* Format */}
             <div className="mb-4">
-              <label className="mb-2 block text-sm font-medium text-gray-700">
+              <label className="mb-2 block text-sm font-medium text-slate-700">
                 Output Format
               </label>
 
               <select
                 value={format}
                 onChange={(e) => setFormat(e.target.value)}
-                className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
               >
                 <option value="image/jpeg">JPG</option>
                 <option value="image/png">PNG</option>
@@ -445,11 +445,11 @@ export default function ImageResizer() {
             {/* Quality */}
             <div className="mb-6">
               <div className="mb-2 flex items-center justify-between">
-                <label className="text-sm font-medium text-gray-700">
+                <label className="text-sm font-medium text-slate-700">
                   Quality
                 </label>
 
-                <span className="text-sm font-semibold text-blue-600">
+                <span className="text-sm font-semibold text-indigo-600">
                   {quality}%
                 </span>
               </div>
@@ -462,10 +462,10 @@ export default function ImageResizer() {
                 onChange={(e) =>
                   setQuality(Number(e.target.value))
                 }
-                className="w-full accent-blue-600"
+                className="w-full accent-indigo-600"
               />
 
-              <div className="mt-1 flex justify-between text-xs text-gray-400">
+              <div className="mt-1 flex justify-between text-xs text-slate-400">
                 <span>Smaller file</span>
                 <span>Better quality</span>
               </div>
@@ -474,7 +474,7 @@ export default function ImageResizer() {
             <button
               type="button"
               onClick={resizeImage}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700"
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white transition hover:bg-indigo-700"
             >
               <FileImage size={19} />
               Resize & Compress
@@ -489,18 +489,18 @@ export default function ImageResizer() {
 
                 <div className="mt-3 space-y-2 text-sm">
                   <div className="flex justify-between gap-3">
-                    <span className="text-gray-600">
+                    <span className="text-slate-600">
                       New size
                     </span>
 
-                    <strong className="text-gray-900">
+                    <strong className="text-slate-900">
                       {formatBytes(outputSize)}
                     </strong>
                   </div>
 
                   {reduction > 0 && (
                     <div className="flex justify-between gap-3">
-                      <span className="text-gray-600">
+                      <span className="text-slate-600">
                         Size reduced
                       </span>
 
@@ -514,7 +514,7 @@ export default function ImageResizer() {
                 <button
                   type="button"
                   onClick={downloadImage}
-                  className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-gray-900 px-4 py-3 font-semibold text-white transition hover:bg-gray-800"
+                  className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white transition hover:bg-slate-800"
                 >
                   <Download size={18} />
                   Download Image
@@ -527,88 +527,88 @@ export default function ImageResizer() {
 
       {/* Features */}
       <section className="mt-10 grid gap-4 sm:grid-cols-3">
-        <div className="rounded-2xl border border-gray-200 bg-white p-5">
-          <Upload className="mb-3 text-blue-600" size={23} />
+        <div className="rounded-3xl border border-slate-200 bg-white p-5">
+          <Upload className="mb-3 text-indigo-600" size={23} />
 
-          <h3 className="font-semibold text-gray-900">
+          <h3 className="font-semibold text-slate-900">
             Browser Processing
           </h3>
 
-          <p className="mt-2 text-sm leading-6 text-gray-600">
+          <p className="mt-2 text-sm leading-6 text-slate-600">
             Your image is processed directly in your browser.
           </p>
         </div>
 
-        <div className="rounded-2xl border border-gray-200 bg-white p-5">
-          <Lock className="mb-3 text-blue-600" size={23} />
+        <div className="rounded-3xl border border-slate-200 bg-white p-5">
+          <Lock className="mb-3 text-indigo-600" size={23} />
 
-          <h3 className="font-semibold text-gray-900">
+          <h3 className="font-semibold text-slate-900">
             Privacy Friendly
           </h3>
 
-          <p className="mt-2 text-sm leading-6 text-gray-600">
+          <p className="mt-2 text-sm leading-6 text-slate-600">
             No account or server-side image upload is required.
           </p>
         </div>
 
-        <div className="rounded-2xl border border-gray-200 bg-white p-5">
-          <ImageIcon className="mb-3 text-blue-600" size={23} />
+        <div className="rounded-3xl border border-slate-200 bg-white p-5">
+          <ImageIcon className="mb-3 text-indigo-600" size={23} />
 
-          <h3 className="font-semibold text-gray-900">
+          <h3 className="font-semibold text-slate-900">
             Multiple Formats
           </h3>
 
-          <p className="mt-2 text-sm leading-6 text-gray-600">
+          <p className="mt-2 text-sm leading-6 text-slate-600">
             Export your resized image as JPG, PNG or WebP.
           </p>
         </div>
       </section>
 
       {/* How it works */}
-      <section className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-bold text-gray-900">
+      <section className="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-2xl font-bold text-slate-900">
           How to Resize an Image
         </h2>
 
         <div className="mt-5 grid gap-5 sm:grid-cols-3">
           <div>
-            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-blue-100 font-bold text-blue-600">
+            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-indigo-100 font-bold text-indigo-600">
               1
             </div>
 
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-slate-900">
               Upload Image
             </h3>
 
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm leading-6 text-slate-600">
               Select the image you want to resize or compress.
             </p>
           </div>
 
           <div>
-            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-blue-100 font-bold text-blue-600">
+            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-indigo-100 font-bold text-indigo-600">
               2
             </div>
 
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-slate-900">
               Choose Size
             </h3>
 
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm leading-6 text-slate-600">
               Set your desired width, height, format and quality.
             </p>
           </div>
 
           <div>
-            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-blue-100 font-bold text-blue-600">
+            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-indigo-100 font-bold text-indigo-600">
               3
             </div>
 
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-slate-900">
               Download
             </h3>
 
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm leading-6 text-slate-600">
               Process the image and download the optimized result.
             </p>
           </div>
@@ -616,12 +616,12 @@ export default function ImageResizer() {
       </section>
 
       {/* FAQ / SEO content */}
-      <section className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-bold text-gray-900">
+      <section className="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-2xl font-bold text-slate-900">
           Image Resizer & Compressor
         </h2>
 
-        <div className="mt-4 space-y-4 text-sm leading-7 text-gray-600">
+        <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">
           <p>
             An image resizer changes the dimensions of an image while
             an image compressor reduces its file size. This tool lets

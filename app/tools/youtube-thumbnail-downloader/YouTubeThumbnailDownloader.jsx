@@ -122,24 +122,24 @@ export default function YouTubeThumbnailDownloader() {
     <div className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
       {/* Hero */}
       <div className="mb-8 text-center">
-        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-red-600 text-white">
+        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-red-500 to-rose-600 text-white shadow-lg ring-4 ring-red-100">
           <Video size={28} />
         </div>
 
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
           YouTube Thumbnail Downloader
         </h1>
 
-        <p className="mx-auto mt-3 max-w-2xl text-gray-600">
+        <p className="mx-auto mt-3 max-w-2xl text-slate-600">
           Download and save YouTube video thumbnails in different
           available resolutions. No signup required.
         </p>
       </div>
 
       {/* Downloader */}
-      <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-7">
+      <div className="mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
         <form onSubmit={handleSubmit}>
-          <label className="mb-2 block text-sm font-semibold text-gray-800">
+          <label className="mb-2 block text-sm font-semibold text-slate-800">
             YouTube Video URL
           </label>
 
@@ -149,7 +149,7 @@ export default function YouTubeThumbnailDownloader() {
               value={url}
               onChange={(e) => setUrl(e.target.value)}
               placeholder="https://www.youtube.com/watch?v=..."
-              className="min-w-0 flex-1 rounded-xl border border-gray-300 px-4 py-3 text-base outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"
+              className="min-w-0 flex-1 rounded-xl border border-slate-300 px-4 py-3 text-base outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"
             />
 
             <button
@@ -173,11 +173,11 @@ export default function YouTubeThumbnailDownloader() {
       {videoId && (
         <section className="mt-8">
           <div className="mb-5">
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               Available Thumbnails
             </h2>
 
-            <p className="mt-1 text-sm text-gray-500">
+            <p className="mt-1 text-sm text-slate-500">
               Choose a resolution and download or copy the image URL.
             </p>
           </div>
@@ -189,10 +189,10 @@ export default function YouTubeThumbnailDownloader() {
               return (
                 <div
                   key={thumbnail.file}
-                  className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
+                  className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
                 >
                   {/* Image */}
-                  <div className="aspect-video bg-gray-100">
+                  <div className="aspect-video bg-slate-100">
                     <img
                       src={imageUrl}
                       alt={`YouTube thumbnail - ${thumbnail.name}`}
@@ -206,11 +206,11 @@ export default function YouTubeThumbnailDownloader() {
                   {/* Info */}
                   <div className="p-5">
                     <div className="mb-4">
-                      <h3 className="font-semibold text-gray-900">
+                      <h3 className="font-semibold text-slate-900">
                         {thumbnail.name}
                       </h3>
 
-                      <p className="mt-1 text-sm text-gray-500">
+                      <p className="mt-1 text-sm text-slate-500">
                         {thumbnail.description}
                       </p>
                     </div>
@@ -221,7 +221,7 @@ export default function YouTubeThumbnailDownloader() {
                         download
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gray-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-800"
+                        className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
                       >
                         <Download size={17} />
                         Download
@@ -232,7 +232,7 @@ export default function YouTubeThumbnailDownloader() {
                         onClick={() =>
                           copyUrl(imageUrl, thumbnail.file)
                         }
-                        className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-gray-300 px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-gray-50"
+                        className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-slate-300 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
                       >
                         {copied === thumbnail.file ? (
                           <>
@@ -256,8 +256,8 @@ export default function YouTubeThumbnailDownloader() {
       )}
 
       {/* Supported URLs */}
-      <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900">
+      <section className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900">
           Supported YouTube URLs
         </h2>
 
@@ -270,7 +270,7 @@ export default function YouTubeThumbnailDownloader() {
           ].map((item) => (
             <div
               key={item}
-              className="rounded-xl bg-gray-50 px-4 py-3 text-sm text-gray-600"
+              className="rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-600"
             >
               ✓ {item}
             </div>
@@ -279,8 +279,8 @@ export default function YouTubeThumbnailDownloader() {
       </section>
 
       {/* How to use */}
-      <section className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-bold text-gray-900">
+      <section className="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-2xl font-bold text-slate-900">
           How to Download a YouTube Thumbnail
         </h2>
 
@@ -289,10 +289,10 @@ export default function YouTubeThumbnailDownloader() {
             <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-red-100 font-bold text-red-600">
               1
             </div>
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-slate-900">
               Copy the URL
             </h3>
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm leading-6 text-slate-600">
               Copy the URL of the YouTube video you want to use.
             </p>
           </div>
@@ -301,10 +301,10 @@ export default function YouTubeThumbnailDownloader() {
             <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-red-100 font-bold text-red-600">
               2
             </div>
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-slate-900">
               Paste the URL
             </h3>
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm leading-6 text-slate-600">
               Paste the video URL into the input field above.
             </p>
           </div>
@@ -313,10 +313,10 @@ export default function YouTubeThumbnailDownloader() {
             <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-red-100 font-bold text-red-600">
               3
             </div>
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-slate-900">
               Download
             </h3>
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm leading-6 text-slate-600">
               Select the available thumbnail quality and save it.
             </p>
           </div>
@@ -325,11 +325,11 @@ export default function YouTubeThumbnailDownloader() {
 
       {/* Important info */}
       <section className="mt-6 rounded-2xl border border-yellow-200 bg-yellow-50 p-6">
-        <h2 className="font-bold text-gray-900">
+        <h2 className="font-bold text-slate-900">
           Important Information
         </h2>
 
-        <p className="mt-2 text-sm leading-6 text-gray-700">
+        <p className="mt-2 text-sm leading-6 text-slate-700">
           Thumbnail availability and resolution can vary by YouTube
           video. Only use downloaded thumbnails when you have the
           appropriate rights or permission to use them. This tool is
@@ -343,7 +343,7 @@ export default function YouTubeThumbnailDownloader() {
           <button
             type="button"
             onClick={reset}
-            className="rounded-xl border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-50"
+            className="rounded-xl border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
           >
             Download Another Thumbnail
           </button>

@@ -288,21 +288,21 @@ export default function AreaCalculator() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
 
         {/* Small Heading */}
         <div className="mb-8 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-700">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-indigo-50 px-3 py-1.5 text-sm font-semibold text-indigo-700">
             <Ruler size={15} />
             Land Area Tool
           </div>
 
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
             Area Calculator
           </h1>
 
-          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-gray-600">
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-600">
             Calculate land and shape areas using different measurement units,
             including square feet, square yards, acres, kanal, marla, killa,
             hectares and more.
@@ -312,13 +312,13 @@ export default function AreaCalculator() {
         <div className="grid gap-6 lg:grid-cols-[1fr_380px]">
 
           {/* Calculator */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-7">
+          <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
 
             <div className="grid gap-5 sm:grid-cols-2">
 
               {/* Shape */}
               <div>
-                <label className="mb-2 block text-sm font-semibold text-gray-800">
+                <label className="mb-2 block text-sm font-semibold text-slate-800">
                   Shape
                 </label>
 
@@ -329,7 +329,7 @@ export default function AreaCalculator() {
                       setShape(e.target.value);
                       setResult(null);
                     }}
-                    className="w-full appearance-none rounded-xl border border-gray-300 bg-white px-4 py-3 pr-10 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10"
+                    className="w-full appearance-none rounded-xl border border-slate-300 bg-white px-4 py-3 pr-10 text-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                   >
                     {SHAPES.map((item) => (
                       <option key={item.id} value={item.id}>
@@ -340,14 +340,14 @@ export default function AreaCalculator() {
 
                   <ChevronDown
                     size={18}
-                    className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
+                    className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-500"
                   />
                 </div>
               </div>
 
               {/* Unit */}
               <div>
-                <label className="mb-2 block text-sm font-semibold text-gray-800">
+                <label className="mb-2 block text-sm font-semibold text-slate-800">
                   Input Unit
                 </label>
 
@@ -358,7 +358,7 @@ export default function AreaCalculator() {
                       setUnit(e.target.value);
                       setResult(null);
                     }}
-                    className="w-full appearance-none rounded-xl border border-gray-300 bg-white px-4 py-3 pr-10 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10"
+                    className="w-full appearance-none rounded-xl border border-slate-300 bg-white px-4 py-3 pr-10 text-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                   >
                     {Object.keys(LENGTH_TO_METER).map((item) => (
                       <option key={item} value={item}>
@@ -369,7 +369,7 @@ export default function AreaCalculator() {
 
                   <ChevronDown
                     size={18}
-                    className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
+                    className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-500"
                   />
                 </div>
               </div>
@@ -381,12 +381,12 @@ export default function AreaCalculator() {
                 <div key={key}>
                   <label
                     htmlFor={key}
-                    className="mb-2 block text-sm font-semibold text-gray-800"
+                    className="mb-2 block text-sm font-semibold text-slate-800"
                   >
                     {label}
                   </label>
 
-                  <div className="flex overflow-hidden rounded-xl border border-gray-300 focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/10">
+                  <div className="flex overflow-hidden rounded-xl border border-slate-300 focus-within:border-indigo-500 focus-within:ring-4 focus-within:ring-indigo-500/10">
                     <input
                       id={key}
                       type="number"
@@ -400,7 +400,7 @@ export default function AreaCalculator() {
                       className="min-w-0 flex-1 px-4 py-3 text-sm outline-none"
                     />
 
-                    <span className="flex items-center border-l border-gray-200 bg-gray-50 px-3 text-xs font-medium text-gray-500">
+                    <span className="flex items-center border-l border-slate-200 bg-slate-50 px-3 text-xs font-medium text-slate-500">
                       {unit}
                     </span>
                   </div>
@@ -412,7 +412,7 @@ export default function AreaCalculator() {
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <button
                 onClick={calculate}
-                className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-gray-900 px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-gray-800"
+                className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-slate-900 px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-slate-800"
               >
                 <Calculator size={18} />
                 Calculate Area
@@ -420,7 +420,7 @@ export default function AreaCalculator() {
 
               <button
                 onClick={reset}
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-5 py-3.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-50"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
               >
                 <RotateCcw size={17} />
                 Reset
@@ -440,36 +440,36 @@ export default function AreaCalculator() {
           </div>
 
           {/* Result */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-7">
+          <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
 
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-500">
+                <p className="text-sm font-medium text-slate-500">
                   Calculated Area
                 </p>
 
-                <h2 className="mt-1 text-2xl font-bold text-gray-900">
+                <h2 className="mt-1 text-2xl font-bold text-slate-900">
                   Result
                 </h2>
               </div>
 
-              <div className="rounded-xl bg-blue-50 p-3 text-blue-600">
+              <div className="rounded-xl bg-indigo-50 p-3 text-indigo-600">
                 <Ruler size={22} />
               </div>
             </div>
 
             {result ? (
               <>
-                <div className="mt-6 rounded-xl bg-gray-50 p-5 text-center">
-                  <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
+                <div className="mt-6 rounded-xl bg-slate-50 p-5 text-center">
+                  <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
                     Square Meters
                   </p>
 
-                  <p className="mt-2 break-words text-3xl font-bold text-gray-900">
+                  <p className="mt-2 break-words text-3xl font-bold text-slate-900">
                     {formatNumber(result)}
                   </p>
 
-                  <p className="mt-1 text-sm text-gray-500">
+                  <p className="mt-1 text-sm text-slate-500">
                     m²
                   </p>
                 </div>
@@ -478,11 +478,11 @@ export default function AreaCalculator() {
                   {resultUnits.map(([name, factor]) => (
                     <div
                       key={name}
-                      className="flex items-center justify-between border-b border-gray-100 py-2.5 text-sm"
+                      className="flex items-center justify-between border-b border-slate-100 py-2.5 text-sm"
                     >
-                      <span className="text-gray-600">{name}</span>
+                      <span className="text-slate-600">{name}</span>
 
-                      <span className="font-semibold text-gray-900">
+                      <span className="font-semibold text-slate-900">
                         {formatNumber(getConvertedResult(factor))}
                       </span>
                     </div>
@@ -491,24 +491,24 @@ export default function AreaCalculator() {
 
                 <button
                   onClick={downloadPDF}
-                  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-gray-800 transition hover:bg-gray-50"
+                  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-50"
                 >
                   <Download size={17} />
                   Download / Save PDF
                 </button>
               </>
             ) : (
-              <div className="mt-8 rounded-xl border border-dashed border-gray-300 p-8 text-center">
+              <div className="mt-8 rounded-xl border border-dashed border-slate-300 p-8 text-center">
                 <Calculator
                   size={32}
-                  className="mx-auto text-gray-400"
+                  className="mx-auto text-slate-400"
                 />
 
-                <p className="mt-3 text-sm font-medium text-gray-700">
+                <p className="mt-3 text-sm font-medium text-slate-700">
                   Enter your measurements
                 </p>
 
-                <p className="mt-1 text-xs leading-5 text-gray-500">
+                <p className="mt-1 text-xs leading-5 text-slate-500">
                   Select a shape and unit, enter the required values, then
                   calculate your area.
                 </p>
@@ -518,12 +518,12 @@ export default function AreaCalculator() {
         </div>
 
         {/* Supported Units */}
-        <section className="mt-12 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
-          <h2 className="text-xl font-bold text-gray-900">
+        <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+          <h2 className="text-xl font-bold text-slate-900">
             Supported Land Area Units
           </h2>
 
-          <p className="mt-2 text-sm leading-6 text-gray-600">
+          <p className="mt-2 text-sm leading-6 text-slate-600">
             Results can be viewed in common international area units and
             commonly used land measurement units.
           </p>
@@ -551,7 +551,7 @@ export default function AreaCalculator() {
             ].map((item) => (
               <span
                 key={item}
-                className="rounded-lg bg-gray-100 px-3 py-2 text-xs font-medium text-gray-700"
+                className="rounded-lg bg-slate-100 px-3 py-2 text-xs font-medium text-slate-700"
               >
                 {item}
               </span>
@@ -561,12 +561,12 @@ export default function AreaCalculator() {
 
         {/* Information */}
         <section className="mt-8 grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-gray-200 bg-white p-6">
-            <h2 className="text-lg font-bold text-gray-900">
+          <div className="rounded-3xl border border-slate-200 bg-white p-6">
+            <h2 className="text-lg font-bold text-slate-900">
               Common Land Measurements
             </h2>
 
-            <div className="mt-4 space-y-3 text-sm text-gray-600">
+            <div className="mt-4 space-y-3 text-sm text-slate-600">
               <p>
                 <strong>1 Acre</strong> = 43,560 square feet
               </p>
@@ -587,12 +587,12 @@ export default function AreaCalculator() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-gray-200 bg-white p-6">
-            <h2 className="text-lg font-bold text-gray-900">
+          <div className="rounded-3xl border border-slate-200 bg-white p-6">
+            <h2 className="text-lg font-bold text-slate-900">
               Accuracy Note
             </h2>
 
-            <p className="mt-4 text-sm leading-6 text-gray-600">
+            <p className="mt-4 text-sm leading-6 text-slate-600">
               This calculator is intended for general calculations. Local land
               measurement standards can differ by country or region,
               especially for units such as kanal, marla, killa and bigha.

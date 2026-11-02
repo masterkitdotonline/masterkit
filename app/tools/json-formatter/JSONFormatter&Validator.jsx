@@ -119,33 +119,33 @@ export default function JsonFormatterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 px-4 py-10">
+    <div className="min-h-screen bg-slate-50 px-4 py-10">
       <div className="mx-auto max-w-6xl">
 
         {/* Header */}
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-black text-white">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-600 to-slate-800 text-white shadow-lg ring-4 ring-slate-100">
             <Braces size={28} />
           </div>
 
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             JSON Formatter & Validator
           </h1>
 
-          <p className="mx-auto mt-3 max-w-2xl text-gray-600">
+          <p className="mx-auto mt-3 max-w-2xl text-slate-600">
             Format, validate, minify and beautify JSON online for free.
             Everything runs directly in your browser.
           </p>
         </div>
 
         {/* Main Tool */}
-        <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
+        <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
 
           {/* Toolbar */}
           <div className="mb-5 flex flex-wrap gap-2">
             <button
               onClick={formatJSON}
-              className="inline-flex items-center gap-2 rounded-lg bg-black px-4 py-2.5 text-sm font-medium text-white transition hover:bg-gray-800"
+              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-indigo-600 to-violet-600 shadow-md shadow-indigo-500/25 hover:brightness-110 px-4 py-2.5 text-sm font-medium text-white transition "
             >
               <Sparkles size={17} />
               Format
@@ -153,7 +153,7 @@ export default function JsonFormatterPage() {
 
             <button
               onClick={minifyJSON}
-              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
             >
               <Minimize2 size={17} />
               Minify
@@ -161,7 +161,7 @@ export default function JsonFormatterPage() {
 
             <button
               onClick={validateOnly}
-              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
             >
               <Check size={17} />
               Validate
@@ -169,7 +169,7 @@ export default function JsonFormatterPage() {
 
             <button
               onClick={loadExample}
-              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
             >
               <FileJson size={17} />
               Example
@@ -177,7 +177,7 @@ export default function JsonFormatterPage() {
 
             <button
               onClick={clearAll}
-              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
             >
               <RotateCcw size={17} />
               Clear
@@ -190,11 +190,11 @@ export default function JsonFormatterPage() {
             {/* Input */}
             <div>
               <div className="mb-2 flex items-center justify-between">
-                <label className="text-sm font-semibold text-gray-900">
+                <label className="text-sm font-semibold text-slate-900">
                   JSON Input
                 </label>
 
-                <span className="text-xs text-gray-500">
+                <span className="text-xs text-slate-500">
                   Paste your JSON
                 </span>
               </div>
@@ -212,14 +212,14 @@ export default function JsonFormatterPage() {
   "active": true
 }`}
                 spellCheck={false}
-                className="h-[420px] w-full resize-y rounded-xl border border-gray-300 bg-gray-950 p-4 font-mono text-sm leading-6 text-gray-100 outline-none transition placeholder:text-gray-600 focus:border-gray-500 focus:ring-2 focus:ring-gray-200"
+                className="h-[420px] w-full resize-y rounded-xl border border-slate-300 bg-slate-950 p-4 font-mono text-sm leading-6 text-slate-100 outline-none transition placeholder:text-slate-600 focus:border-slate-500 focus:ring-2 focus:ring-slate-200"
               />
             </div>
 
             {/* Output */}
             <div>
               <div className="mb-2 flex items-center justify-between">
-                <label className="text-sm font-semibold text-gray-900">
+                <label className="text-sm font-semibold text-slate-900">
                   Result
                 </label>
 
@@ -227,7 +227,7 @@ export default function JsonFormatterPage() {
                   <button
                     onClick={copyJSON}
                     disabled={!jsonOutput}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 px-3 py-1.5 text-xs font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 px-3 py-1.5 text-xs font-medium text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     {copied ? (
                       <>
@@ -247,7 +247,7 @@ export default function JsonFormatterPage() {
                     disabled={
                       !jsonOutput || jsonOutput === "✓ Valid JSON"
                     }
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 px-3 py-1.5 text-xs font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 px-3 py-1.5 text-xs font-medium text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     <Download size={14} />
                     Download
@@ -255,9 +255,9 @@ export default function JsonFormatterPage() {
                 </div>
               </div>
 
-              <div className="h-[420px] overflow-auto rounded-xl border border-gray-300 bg-gray-950 p-4">
+              <div className="h-[420px] overflow-auto rounded-xl border border-slate-300 bg-slate-950 p-4">
                 {jsonOutput ? (
-                  <pre className="whitespace-pre-wrap break-words font-mono text-sm leading-6 text-gray-100">
+                  <pre className="whitespace-pre-wrap break-words font-mono text-sm leading-6 text-slate-100">
                     {jsonOutput}
                   </pre>
                 ) : (
@@ -265,10 +265,10 @@ export default function JsonFormatterPage() {
                     <div>
                       <Braces
                         size={40}
-                        className="mx-auto mb-3 text-gray-700"
+                        className="mx-auto mb-3 text-slate-700"
                       />
 
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-slate-500">
                         Formatted JSON will appear here
                       </p>
                     </div>
@@ -293,18 +293,18 @@ export default function JsonFormatterPage() {
           )}
 
           {/* Privacy */}
-          <div className="mt-5 flex items-start gap-3 rounded-xl border border-gray-200 bg-gray-50 p-4">
+          <div className="mt-5 flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
             <Braces
               size={19}
-              className="mt-0.5 shrink-0 text-gray-600"
+              className="mt-0.5 shrink-0 text-slate-600"
             />
 
             <div>
-              <p className="text-sm font-semibold text-gray-900">
+              <p className="text-sm font-semibold text-slate-900">
                 Your JSON stays in your browser
               </p>
 
-              <p className="mt-1 text-sm text-gray-600">
+              <p className="mt-1 text-sm text-slate-600">
                 This tool processes JSON locally in your browser. Your
                 JSON is not uploaded to a server by this tool.
               </p>
@@ -314,11 +314,11 @@ export default function JsonFormatterPage() {
 
         {/* About */}
         <section className="mt-12">
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-2xl font-bold text-slate-900">
             JSON Formatter & Validator
           </h2>
 
-          <div className="mt-4 space-y-4 text-gray-600 leading-7">
+          <div className="mt-4 space-y-4 text-slate-600 leading-7">
             <p>
               JSON Formatter & Validator is a free online tool for
               developers who need to quickly format, validate, beautify,
@@ -336,7 +336,7 @@ export default function JsonFormatterPage() {
 
         {/* Features */}
         <section className="mt-10">
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-2xl font-bold text-slate-900">
             Features
           </h2>
 
@@ -369,13 +369,13 @@ export default function JsonFormatterPage() {
             ].map((feature) => (
               <div
                 key={feature.title}
-                className="rounded-xl border border-gray-200 bg-white p-5"
+                className="rounded-xl border border-slate-200 bg-white p-5"
               >
-                <h3 className="font-semibold text-gray-900">
+                <h3 className="font-semibold text-slate-900">
                   {feature.title}
                 </h3>
 
-                <p className="mt-2 text-sm leading-6 text-gray-600">
+                <p className="mt-2 text-sm leading-6 text-slate-600">
                   {feature.text}
                 </p>
               </div>
@@ -385,23 +385,23 @@ export default function JsonFormatterPage() {
 
         {/* How To Use */}
         <section className="mt-10">
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-2xl font-bold text-slate-900">
             How to Use the JSON Formatter
           </h2>
 
-          <ol className="mt-5 space-y-3 text-gray-600">
+          <ol className="mt-5 space-y-3 text-slate-600">
             <li>
-              <strong className="text-gray-900">1. Paste JSON:</strong>{" "}
+              <strong className="text-slate-900">1. Paste JSON:</strong>{" "}
               Add your JSON data to the input box.
             </li>
 
             <li>
-              <strong className="text-gray-900">2. Choose an action:</strong>{" "}
+              <strong className="text-slate-900">2. Choose an action:</strong>{" "}
               Format, Minify, or Validate your JSON.
             </li>
 
             <li>
-              <strong className="text-gray-900">3. Copy or download:</strong>{" "}
+              <strong className="text-slate-900">3. Copy or download:</strong>{" "}
               Use the available buttons to save the result.
             </li>
           </ol>
@@ -409,17 +409,17 @@ export default function JsonFormatterPage() {
 
         {/* FAQ */}
         <section className="mt-10 pb-10">
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-2xl font-bold text-slate-900">
             Frequently Asked Questions
           </h2>
 
           <div className="mt-5 space-y-5">
             <div>
-              <h3 className="font-semibold text-gray-900">
+              <h3 className="font-semibold text-slate-900">
                 What is JSON?
               </h3>
 
-              <p className="mt-2 text-gray-600">
+              <p className="mt-2 text-slate-600">
                 JSON stands for JavaScript Object Notation. It is a
                 lightweight data format commonly used for APIs,
                 configuration files, and transferring structured data.
@@ -427,33 +427,33 @@ export default function JsonFormatterPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900">
+              <h3 className="font-semibold text-slate-900">
                 What does JSON formatting do?
               </h3>
 
-              <p className="mt-2 text-gray-600">
+              <p className="mt-2 text-slate-600">
                 Formatting adds indentation and line breaks to make JSON
                 easier for humans to read and debug.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900">
+              <h3 className="font-semibold text-slate-900">
                 What does JSON minification do?
               </h3>
 
-              <p className="mt-2 text-gray-600">
+              <p className="mt-2 text-slate-600">
                 Minification removes unnecessary spaces and line breaks
                 while keeping the JSON data unchanged.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900">
+              <h3 className="font-semibold text-slate-900">
                 Is my JSON uploaded?
               </h3>
 
-              <p className="mt-2 text-gray-600">
+              <p className="mt-2 text-slate-600">
                 The formatting and validation in this tool happen
                 directly in your browser. Your JSON is not sent to a
                 server by the tool.

@@ -42,7 +42,7 @@ function getCategory(bmi) {
 function getCategoryStyle(category) {
   switch (category) {
     case "Underweight":
-      return "bg-blue-50 text-blue-700 border-blue-200";
+      return "bg-indigo-50 text-indigo-700 border-indigo-200";
 
     case "Healthy Weight":
       return "bg-green-50 text-green-700 border-green-200";
@@ -54,7 +54,7 @@ function getCategoryStyle(category) {
       return "bg-red-50 text-red-700 border-red-200";
 
     default:
-      return "bg-gray-50 text-gray-700 border-gray-200";
+      return "bg-slate-50 text-slate-700 border-slate-200";
   }
 }
 
@@ -129,21 +129,21 @@ export default function BMICalculator() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
 
         {/* Heading */}
         <div className="mb-8 text-center">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-700">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-rose-50 px-3 py-1.5 text-sm font-semibold text-rose-700">
             <Activity size={15} />
             Health Calculator
           </div>
 
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
             BMI Calculator
           </h1>
 
-          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-gray-600">
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-600">
             Calculate your Body Mass Index (BMI) using your height and weight.
             Supports both metric and US measurement units.
           </p>
@@ -152,15 +152,15 @@ export default function BMICalculator() {
         <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
 
           {/* Calculator */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-7">
+          <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
 
             {/* Unit Toggle */}
             <div>
-              <label className="mb-2 block text-sm font-semibold text-gray-800">
+              <label className="mb-2 block text-sm font-semibold text-slate-800">
                 Measurement System
               </label>
 
-              <div className="grid grid-cols-2 rounded-xl bg-gray-100 p-1">
+              <div className="grid grid-cols-2 rounded-xl bg-slate-100 p-1">
                 <button
                   type="button"
                   onClick={() => {
@@ -169,8 +169,8 @@ export default function BMICalculator() {
                   }}
                   className={`rounded-lg px-4 py-2.5 text-sm font-semibold transition ${
                     unit === "metric"
-                      ? "bg-white text-gray-900 shadow-sm"
-                      : "text-gray-500 hover:text-gray-900"
+                      ? "bg-white text-slate-900 shadow-sm"
+                      : "text-slate-500 hover:text-slate-900"
                   }`}
                 >
                   Metric
@@ -184,8 +184,8 @@ export default function BMICalculator() {
                   }}
                   className={`rounded-lg px-4 py-2.5 text-sm font-semibold transition ${
                     unit === "us"
-                      ? "bg-white text-gray-900 shadow-sm"
-                      : "text-gray-500 hover:text-gray-900"
+                      ? "bg-white text-slate-900 shadow-sm"
+                      : "text-slate-500 hover:text-slate-900"
                   }`}
                 >
                   US Units
@@ -202,12 +202,12 @@ export default function BMICalculator() {
                   <div>
                     <label
                       htmlFor="height"
-                      className="mb-2 block text-sm font-semibold text-gray-800"
+                      className="mb-2 block text-sm font-semibold text-slate-800"
                     >
                       Height
                     </label>
 
-                    <div className="flex overflow-hidden rounded-xl border border-gray-300 focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/10">
+                    <div className="flex overflow-hidden rounded-xl border border-slate-300 focus-within:border-indigo-500 focus-within:ring-4 focus-within:ring-indigo-500/10">
                       <input
                         id="height"
                         type="number"
@@ -219,7 +219,7 @@ export default function BMICalculator() {
                         className="min-w-0 flex-1 px-4 py-3 text-sm outline-none"
                       />
 
-                      <span className="flex items-center border-l border-gray-200 bg-gray-50 px-3 text-xs font-medium text-gray-500">
+                      <span className="flex items-center border-l border-slate-200 bg-slate-50 px-3 text-xs font-medium text-slate-500">
                         cm
                       </span>
                     </div>
@@ -228,12 +228,12 @@ export default function BMICalculator() {
                   <div>
                     <label
                       htmlFor="weight"
-                      className="mb-2 block text-sm font-semibold text-gray-800"
+                      className="mb-2 block text-sm font-semibold text-slate-800"
                     >
                       Weight
                     </label>
 
-                    <div className="flex overflow-hidden rounded-xl border border-gray-300 focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/10">
+                    <div className="flex overflow-hidden rounded-xl border border-slate-300 focus-within:border-indigo-500 focus-within:ring-4 focus-within:ring-indigo-500/10">
                       <input
                         id="weight"
                         type="number"
@@ -245,7 +245,7 @@ export default function BMICalculator() {
                         className="min-w-0 flex-1 px-4 py-3 text-sm outline-none"
                       />
 
-                      <span className="flex items-center border-l border-gray-200 bg-gray-50 px-3 text-xs font-medium text-gray-500">
+                      <span className="flex items-center border-l border-slate-200 bg-slate-50 px-3 text-xs font-medium text-slate-500">
                         kg
                       </span>
                     </div>
@@ -259,12 +259,12 @@ export default function BMICalculator() {
                   <div>
                     <label
                       htmlFor="feet"
-                      className="mb-2 block text-sm font-semibold text-gray-800"
+                      className="mb-2 block text-sm font-semibold text-slate-800"
                     >
                       Height
                     </label>
 
-                    <div className="flex overflow-hidden rounded-xl border border-gray-300 focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/10">
+                    <div className="flex overflow-hidden rounded-xl border border-slate-300 focus-within:border-indigo-500 focus-within:ring-4 focus-within:ring-indigo-500/10">
                       <input
                         id="feet"
                         type="number"
@@ -276,7 +276,7 @@ export default function BMICalculator() {
                         className="min-w-0 flex-1 px-4 py-3 text-sm outline-none"
                       />
 
-                      <span className="flex items-center border-l border-gray-200 bg-gray-50 px-3 text-xs font-medium text-gray-500">
+                      <span className="flex items-center border-l border-slate-200 bg-slate-50 px-3 text-xs font-medium text-slate-500">
                         ft
                       </span>
                     </div>
@@ -285,12 +285,12 @@ export default function BMICalculator() {
                   <div>
                     <label
                       htmlFor="inches"
-                      className="mb-2 block text-sm font-semibold text-gray-800"
+                      className="mb-2 block text-sm font-semibold text-slate-800"
                     >
                       Height
                     </label>
 
-                    <div className="flex overflow-hidden rounded-xl border border-gray-300 focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/10">
+                    <div className="flex overflow-hidden rounded-xl border border-slate-300 focus-within:border-indigo-500 focus-within:ring-4 focus-within:ring-indigo-500/10">
                       <input
                         id="inches"
                         type="number"
@@ -303,7 +303,7 @@ export default function BMICalculator() {
                         className="min-w-0 flex-1 px-4 py-3 text-sm outline-none"
                       />
 
-                      <span className="flex items-center border-l border-gray-200 bg-gray-50 px-3 text-xs font-medium text-gray-500">
+                      <span className="flex items-center border-l border-slate-200 bg-slate-50 px-3 text-xs font-medium text-slate-500">
                         in
                       </span>
                     </div>
@@ -312,12 +312,12 @@ export default function BMICalculator() {
                   <div>
                     <label
                       htmlFor="weight-us"
-                      className="mb-2 block text-sm font-semibold text-gray-800"
+                      className="mb-2 block text-sm font-semibold text-slate-800"
                     >
                       Weight
                     </label>
 
-                    <div className="flex overflow-hidden rounded-xl border border-gray-300 focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/10">
+                    <div className="flex overflow-hidden rounded-xl border border-slate-300 focus-within:border-indigo-500 focus-within:ring-4 focus-within:ring-indigo-500/10">
                       <input
                         id="weight-us"
                         type="number"
@@ -329,7 +329,7 @@ export default function BMICalculator() {
                         className="min-w-0 flex-1 px-4 py-3 text-sm outline-none"
                       />
 
-                      <span className="flex items-center border-l border-gray-200 bg-gray-50 px-3 text-xs font-medium text-gray-500">
+                      <span className="flex items-center border-l border-slate-200 bg-slate-50 px-3 text-xs font-medium text-slate-500">
                         lb
                       </span>
                     </div>
@@ -342,7 +342,7 @@ export default function BMICalculator() {
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <button
                   type="submit"
-                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-gray-900 px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-gray-800"
+                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-slate-900 px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-slate-800"
                 >
                   <Calculator size={18} />
                   Calculate BMI
@@ -351,7 +351,7 @@ export default function BMICalculator() {
                 <button
                   type="button"
                   onClick={reset}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-5 py-3.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-50"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
                 >
                   <RotateCcw size={17} />
                   Reset
@@ -361,32 +361,32 @@ export default function BMICalculator() {
           </div>
 
           {/* Result */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-7">
+          <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
 
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-500">
+                <p className="text-sm font-medium text-slate-500">
                   Your Result
                 </p>
 
-                <h2 className="mt-1 text-2xl font-bold text-gray-900">
+                <h2 className="mt-1 text-2xl font-bold text-slate-900">
                   BMI
                 </h2>
               </div>
 
-              <div className="rounded-xl bg-blue-50 p-3 text-blue-600">
+              <div className="rounded-xl bg-indigo-50 p-3 text-indigo-600">
                 <Scale size={22} />
               </div>
             </div>
 
             {result ? (
               <>
-                <div className="mt-6 rounded-xl bg-gray-50 p-6 text-center">
-                  <p className="text-sm text-gray-500">
+                <div className="mt-6 rounded-xl bg-slate-50 p-6 text-center">
+                  <p className="text-sm text-slate-500">
                     Body Mass Index
                   </p>
 
-                  <p className="mt-2 text-5xl font-bold text-gray-900">
+                  <p className="mt-2 text-5xl font-bold text-slate-900">
                     {result.bmi.toFixed(1)}
                   </p>
 
@@ -400,11 +400,11 @@ export default function BMICalculator() {
                 </div>
 
                 <div className="mt-6">
-                  <h3 className="text-sm font-bold text-gray-900">
+                  <h3 className="text-sm font-bold text-slate-900">
                     Healthy Weight Range
                   </h3>
 
-                  <p className="mt-2 text-sm text-gray-600">
+                  <p className="mt-2 text-sm text-slate-600">
                     Approximately{" "}
                     <strong>
                       {result.healthyMinWeight.toFixed(1)}
@@ -417,21 +417,21 @@ export default function BMICalculator() {
                   </p>
                 </div>
 
-                <div className="mt-6 overflow-hidden rounded-xl border border-gray-200">
+                <div className="mt-6 overflow-hidden rounded-xl border border-slate-200">
                   {BMI_RANGES.map((item) => (
                     <div
                       key={item.label}
-                      className={`flex items-center justify-between border-b border-gray-100 px-4 py-3 text-sm last:border-b-0 ${
+                      className={`flex items-center justify-between border-b border-slate-100 px-4 py-3 text-sm last:border-b-0 ${
                         result.category === item.label
-                          ? "bg-gray-50 font-semibold"
+                          ? "bg-slate-50 font-semibold"
                           : ""
                       }`}
                     >
-                      <span className="text-gray-700">
+                      <span className="text-slate-700">
                         {item.label}
                       </span>
 
-                      <span className="text-gray-500">
+                      <span className="text-slate-500">
                         {item.label === "Underweight" && "Below 18.5"}
                         {item.label === "Healthy Weight" && "18.5 – 24.9"}
                         {item.label === "Overweight" && "25.0 – 29.9"}
@@ -444,24 +444,24 @@ export default function BMICalculator() {
                 <button
                   type="button"
                   onClick={downloadPDF}
-                  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-gray-800 transition hover:bg-gray-50"
+                  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-50"
                 >
                   <Download size={17} />
                   Download / Save PDF
                 </button>
               </>
             ) : (
-              <div className="mt-8 rounded-xl border border-dashed border-gray-300 p-8 text-center">
+              <div className="mt-8 rounded-xl border border-dashed border-slate-300 p-8 text-center">
                 <Activity
                   size={32}
-                  className="mx-auto text-gray-400"
+                  className="mx-auto text-slate-400"
                 />
 
-                <p className="mt-3 text-sm font-medium text-gray-700">
+                <p className="mt-3 text-sm font-medium text-slate-700">
                   Enter your height and weight
                 </p>
 
-                <p className="mt-1 text-xs leading-5 text-gray-500">
+                <p className="mt-1 text-xs leading-5 text-slate-500">
                   Your BMI result and category will appear here.
                 </p>
               </div>
@@ -470,40 +470,40 @@ export default function BMICalculator() {
         </div>
 
         {/* BMI Information */}
-        <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
-          <h2 className="text-xl font-bold text-gray-900">
+        <section className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+          <h2 className="text-xl font-bold text-slate-900">
             What is BMI?
           </h2>
 
-          <p className="mt-4 text-sm leading-7 text-gray-600">
+          <p className="mt-4 text-sm leading-7 text-slate-600">
             Body Mass Index (BMI) is a screening measurement calculated from
             a person's weight and height. It is commonly used to categorize
             weight status in adults.
           </p>
 
-          <div className="mt-6 rounded-xl bg-gray-50 p-5">
-            <p className="text-sm font-semibold text-gray-900">
+          <div className="mt-6 rounded-xl bg-slate-50 p-5">
+            <p className="text-sm font-semibold text-slate-900">
               BMI Formula
             </p>
 
-            <p className="mt-2 font-mono text-sm text-gray-700">
+            <p className="mt-2 font-mono text-sm text-slate-700">
               BMI = Weight (kg) ÷ Height² (m²)
             </p>
           </div>
         </section>
 
         {/* Categories */}
-        <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
-          <h2 className="text-xl font-bold text-gray-900">
+        <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+          <h2 className="text-xl font-bold text-slate-900">
             Adult BMI Categories
           </h2>
 
           <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
-              <p className="font-semibold text-blue-700">
+            <div className="rounded-xl border border-indigo-200 bg-indigo-50 p-4">
+              <p className="font-semibold text-indigo-700">
                 Underweight
               </p>
-              <p className="mt-1 text-sm text-blue-700/80">
+              <p className="mt-1 text-sm text-indigo-700/80">
                 Below 18.5
               </p>
             </div>

@@ -8,13 +8,13 @@ export default function ContactPage() {
   return (
     <main className="bg-white">
       {/* Hero */}
-      <section className="border-b bg-gray-50">
+      <section className="border-b bg-slate-50">
         <div className="mx-auto max-w-4xl px-6 py-16 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             Contact Us
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-gray-600">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
             Have a question, suggestion, or found an issue with one of our
             tools? We would love to hear from you.
           </p>
@@ -26,11 +26,11 @@ export default function ContactPage() {
         <div className="grid gap-10 md:grid-cols-2">
           {/* Contact Information */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-slate-900">
               Get in Touch
             </h2>
 
-            <p className="mt-4 leading-7 text-gray-600">
+            <p className="mt-4 leading-7 text-slate-600">
               MasterKit is built to provide simple and useful online
               calculators and tools. If you have feedback or need help with a
               tool, you can contact us using the information below.
@@ -38,23 +38,23 @@ export default function ContactPage() {
 
             <div className="mt-8 space-y-6">
               {/* <div>
-                <h3 className="font-semibold text-gray-900">Email</h3>
-                <p className="mt-1 text-gray-600">
+                <h3 className="font-semibold text-slate-900">Email</h3>
+                <p className="mt-1 text-slate-600">
                   support@MasterKit.com
                 </p>
               </div> */}
 
               <div>
-                <h3 className="font-semibold text-gray-900">Suggestions</h3>
-                <p className="mt-1 leading-7 text-gray-600">
+                <h3 className="font-semibold text-slate-900">Suggestions</h3>
+                <p className="mt-1 leading-7 text-slate-600">
                   Have an idea for a new calculator or online tool? Send us
                   your suggestion and tell us what would be useful for you.
                 </p>
               </div>
 
               <div>
-                <h3 className="font-semibold text-gray-900">Report an Issue</h3>
-                <p className="mt-1 leading-7 text-gray-600">
+                <h3 className="font-semibold text-slate-900">Report an Issue</h3>
+                <p className="mt-1 leading-7 text-slate-600">
                   If you notice an incorrect result, broken feature, or other
                   technical issue, please let us know so we can review it.
                 </p>
@@ -63,8 +63,8 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-            <h2 className="text-2xl font-bold text-gray-900">
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <h2 className="text-2xl font-bold text-slate-900">
               Send a Message
             </h2>
 
@@ -72,7 +72,7 @@ export default function ContactPage() {
               <div>
                 <label
                   htmlFor="name"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-medium text-slate-700"
                 >
                   Name
                 </label>
@@ -81,14 +81,14 @@ export default function ContactPage() {
                   id="name"
                   type="text"
                   placeholder="Your name"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-medium text-slate-700"
                 >
                   Email
                 </label>
@@ -97,14 +97,14 @@ export default function ContactPage() {
                   id="email"
                   type="email"
                   placeholder="you@example.com"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="subject"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-medium text-slate-700"
                 >
                   Subject
                 </label>
@@ -113,14 +113,14 @@ export default function ContactPage() {
                   id="subject"
                   type="text"
                   placeholder="How can we help?"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-medium text-slate-700"
                 >
                   Message
                 </label>
@@ -129,13 +129,13 @@ export default function ContactPage() {
                   id="message"
                   rows="6"
                   placeholder="Write your message..."
-                  className="w-full resize-none rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                  className="w-full resize-none rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full rounded-lg bg-gray-900 px-5 py-3 font-semibold text-white transition hover:bg-gray-800"
+                className="w-full rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-800"
               >
                 Send Message
               </button>
@@ -145,13 +145,13 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ / Help */}
-      <section className="border-t bg-gray-50">
+      <section className="border-t bg-slate-50">
         <div className="mx-auto max-w-4xl px-6 py-14 text-center">
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-2xl font-bold text-slate-900">
             Before Contacting Us
           </h2>
 
-          <p className="mt-4 leading-7 text-gray-600">
+          <p className="mt-4 leading-7 text-slate-600">
             If you are looking for a particular calculator or tool, check our
             All Tools page first. We regularly add new tools and improve
             existing ones based on user feedback.

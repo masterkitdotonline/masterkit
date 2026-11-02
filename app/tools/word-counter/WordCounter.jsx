@@ -97,26 +97,26 @@ export default function WordCounter() {
     <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
       {/* Hero */}
       <div className="mb-8 text-center">
-        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white">
+        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-lg ring-4 ring-amber-100">
           <FileText size={28} />
         </div>
 
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
           Word Counter
         </h1>
 
-        <p className="mx-auto mt-3 max-w-2xl text-gray-600">
+        <p className="mx-auto mt-3 max-w-2xl text-slate-600">
           Count words, characters, sentences, paragraphs and reading
           time instantly. Free, fast and easy to use.
         </p>
       </div>
 
       {/* Editor */}
-      <div className="rounded-2xl border border-gray-200 bg-white shadow-sm">
+      <div className="rounded-3xl border border-slate-200 bg-white shadow-sm">
         {/* Toolbar */}
-        <div className="flex flex-col gap-3 border-b border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
-            <Type size={18} className="text-blue-600" />
+        <div className="flex flex-col gap-3 border-b border-slate-200 p-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-2 text-sm font-medium text-slate-700">
+            <Type size={18} className="text-indigo-600" />
             Write or paste your text
           </div>
 
@@ -125,7 +125,7 @@ export default function WordCounter() {
               type="button"
               onClick={handleCopy}
               disabled={!text}
-              className="flex items-center gap-2 rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
+              className="flex items-center gap-2 rounded-lg border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40"
             >
               {copied ? (
                 <>
@@ -144,7 +144,7 @@ export default function WordCounter() {
               type="button"
               onClick={handleClear}
               disabled={!text}
-              className="flex items-center gap-2 rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
+              className="flex items-center gap-2 rounded-lg border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40"
             >
               <RotateCcw size={16} />
               Clear
@@ -157,12 +157,12 @@ export default function WordCounter() {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Start typing or paste your text here..."
-          className="min-h-[320px] w-full resize-y border-0 p-5 text-base leading-7 text-gray-800 outline-none focus:ring-0"
+          className="min-h-[320px] w-full resize-y border-0 p-5 text-base leading-7 text-slate-800 outline-none focus:ring-0"
           spellCheck="true"
         />
 
         {/* Bottom info */}
-        <div className="border-t border-gray-200 px-5 py-3 text-xs text-gray-500">
+        <div className="border-t border-slate-200 px-5 py-3 text-xs text-slate-500">
           Your text is processed in your browser.
         </div>
       </div>
@@ -209,12 +209,12 @@ export default function WordCounter() {
       {/* Additional Information */}
       <div className="mt-8 grid gap-6 lg:grid-cols-2">
         {/* Reading & Text Stats */}
-        <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900">
+        <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-slate-900">
             Text Statistics
           </h2>
 
-          <div className="mt-5 divide-y divide-gray-100">
+          <div className="mt-5 divide-y divide-slate-100">
             <InfoRow label="Words" value={stats.words} />
             <InfoRow
               label="Characters"
@@ -235,12 +235,12 @@ export default function WordCounter() {
         </section>
 
         {/* Keyword Frequency */}
-        <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900">
+        <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-slate-900">
             Most Used Words
           </h2>
 
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-slate-500">
             Top repeated words with more than 2 characters.
           </p>
 
@@ -249,37 +249,37 @@ export default function WordCounter() {
               {keywordStats.map(([word, count], index) => (
                 <div
                   key={word}
-                  className="flex items-center justify-between rounded-xl bg-gray-50 px-4 py-3"
+                  className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3"
                 >
                   <div className="flex min-w-0 items-center gap-3">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-600">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-xs font-bold text-indigo-600">
                       {index + 1}
                     </span>
 
-                    <span className="truncate text-sm font-medium text-gray-800">
+                    <span className="truncate text-sm font-medium text-slate-800">
                       {word}
                     </span>
                   </div>
 
-                  <span className="ml-3 text-sm font-semibold text-gray-500">
+                  <span className="ml-3 text-sm font-semibold text-slate-500">
                     {count}
                   </span>
                 </div>
               ))}
             </div>
           ) : (
-            <div className="mt-5 flex min-h-[240px] items-center justify-center rounded-xl border border-dashed border-gray-300 text-center">
+            <div className="mt-5 flex min-h-[240px] items-center justify-center rounded-xl border border-dashed border-slate-300 text-center">
               <div>
                 <FileText
                   size={36}
-                  className="mx-auto mb-3 text-gray-300"
+                  className="mx-auto mb-3 text-slate-300"
                 />
 
-                <p className="font-medium text-gray-500">
+                <p className="font-medium text-slate-500">
                   No text yet
                 </p>
 
-                <p className="mt-1 text-sm text-gray-400">
+                <p className="mt-1 text-sm text-slate-400">
                   Start typing to see word frequency.
                 </p>
               </div>
@@ -289,52 +289,52 @@ export default function WordCounter() {
       </div>
 
       {/* How it works */}
-      <section className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-bold text-gray-900">
+      <section className="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-2xl font-bold text-slate-900">
           How to Use the Word Counter
         </h2>
 
         <div className="mt-5 grid gap-5 sm:grid-cols-3">
           <div>
-            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-blue-100 font-bold text-blue-600">
+            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-indigo-100 font-bold text-indigo-600">
               1
             </div>
 
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-slate-900">
               Enter Your Text
             </h3>
 
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm leading-6 text-slate-600">
               Type directly into the editor or paste your existing
               content.
             </p>
           </div>
 
           <div>
-            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-blue-100 font-bold text-blue-600">
+            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-indigo-100 font-bold text-indigo-600">
               2
             </div>
 
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-slate-900">
               Check Statistics
             </h3>
 
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm leading-6 text-slate-600">
               Word, character, sentence, paragraph and reading-time
               statistics update automatically.
             </p>
           </div>
 
           <div>
-            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-blue-100 font-bold text-blue-600">
+            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-indigo-100 font-bold text-indigo-600">
               3
             </div>
 
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-slate-900">
               Copy Your Text
             </h3>
 
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm leading-6 text-slate-600">
               Use the Copy button to quickly copy your finished text.
             </p>
           </div>
@@ -342,12 +342,12 @@ export default function WordCounter() {
       </section>
 
       {/* SEO Content */}
-      <section className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-bold text-gray-900">
+      <section className="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-2xl font-bold text-slate-900">
           Free Online Word Counter
         </h2>
 
-        <div className="mt-4 space-y-4 text-sm leading-7 text-gray-600">
+        <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">
           <p>
             A word counter is useful for writers, students, bloggers,
             marketers, freelancers and anyone who needs to keep their
@@ -369,40 +369,40 @@ export default function WordCounter() {
       </section>
 
       {/* FAQ */}
-      <section className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-bold text-gray-900">
+      <section className="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-2xl font-bold text-slate-900">
           Frequently Asked Questions
         </h2>
 
         <div className="mt-5 space-y-5">
           <div>
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-slate-900">
               How is the word count calculated?
             </h3>
 
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm leading-6 text-slate-600">
               Words are separated using whitespace, so spaces, tabs and
               line breaks are handled automatically.
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-slate-900">
               Does the tool count spaces as characters?
             </h3>
 
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm leading-6 text-slate-600">
               Yes. The Characters statistic includes spaces. A separate
               Characters without spaces statistic is also provided.
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-slate-900">
               Is my text uploaded anywhere?
             </h3>
 
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm leading-6 text-slate-600">
               No. The counting is performed directly in your browser.
             </p>
           </div>
@@ -414,14 +414,14 @@ export default function WordCounter() {
 
 function StatCard({ label, value, icon }) {
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
-      <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+    <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600">
         {icon}
       </div>
 
-      <p className="text-xs font-medium text-gray-500">{label}</p>
+      <p className="text-xs font-medium text-slate-500">{label}</p>
 
-      <p className="mt-1 break-words text-xl font-bold text-gray-900">
+      <p className="mt-1 break-words text-xl font-bold text-slate-900">
         {value}
       </p>
     </div>
@@ -431,9 +431,9 @@ function StatCard({ label, value, icon }) {
 function InfoRow({ label, value }) {
   return (
     <div className="flex items-center justify-between gap-4 py-3">
-      <span className="text-sm text-gray-600">{label}</span>
+      <span className="text-sm text-slate-600">{label}</span>
 
-      <span className="text-sm font-semibold text-gray-900">
+      <span className="text-sm font-semibold text-slate-900">
         {value}
       </span>
     </div>

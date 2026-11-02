@@ -1,5 +1,6 @@
 
 import JsonFormatterPage from "./JSONFormatter&Validator";
+import AdSlot from "@/components/AdSlot";
 
 
 export const metadata = {
@@ -9,5 +10,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <JsonFormatterPage />;
+  return (
+    <>
+      <JsonFormatterPage />
+      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
+    </>
+  );
 }

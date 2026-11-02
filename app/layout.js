@@ -3,8 +3,7 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AdsteraBanner from "@/components/AdsteraBanner";
-import AdsteraPopunder from "@/components/AdsteraPopunder";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +40,8 @@ export const metadata = {
     "YouTube thumbnail downloader",
     "developer tools",
     "SEO tools",
+    "Mathkit",
+    
   ],
 
   authors: [{ name: "MasterKit" }],
@@ -89,19 +90,40 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // Set NEXT_PUBLIC_ADSENSE_CLIENT=ca-pub-XXXXXXXXXXXXXXXX in .env.local when AdSense is approved.
+  const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <head>
+        {adsenseClient && (
+          <Script
+            id="adsense-loader"
+            async
+            strategy="afterInteractive"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
+            crossOrigin="anonymous"
+          />
+        )}
+      </head>
+      <body className="flex min-h-full flex-col bg-slate-50 text-slate-900">
+      <Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-DVMVXH5WCG"
+  strategy="afterInteractive"
+/>
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DVMVXH5WCG');
+  `}
+</Script>
         <Header />
-        {/* <AdsteraPopunder /> */}
-
-        <main className="flex-1">
-          {children}
-        </main>
-        <AdsteraBanner />
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

@@ -69,32 +69,32 @@ export default function CalorieCalculator() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-black text-white">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-lg ring-4 ring-amber-100">
             <Activity size={28} />
           </div>
 
-          <h1 className="mt-5 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h1 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Calorie Calculator
           </h1>
 
-          <p className="mt-3 text-base leading-7 text-gray-600">
+          <p className="mt-3 text-base leading-7 text-slate-600">
             Estimate your daily calorie needs based on your age,
             gender, height, weight and activity level.
           </p>
         </div>
 
         {/* Calculator */}
-        <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-8">
+        <section className="mt-10 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <div className="grid gap-6 sm:grid-cols-2">
 
             {/* Gender */}
             <div>
-              <label className="mb-2 block text-sm font-semibold text-gray-900">
+              <label className="mb-2 block text-sm font-semibold text-slate-900">
                 Gender
               </label>
 
@@ -104,8 +104,8 @@ export default function CalorieCalculator() {
                   onClick={() => setGender("male")}
                   className={`rounded-xl border px-4 py-3 text-sm font-medium transition ${
                     gender === "male"
-                      ? "border-black bg-black text-white"
-                      : "border-gray-200 bg-white text-gray-700 hover:bg-gray-50"
+                      ? "border-transparent bg-gradient-to-r from-indigo-600 to-violet-600 text-white"
+                      : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
                   }`}
                 >
                   Male
@@ -116,8 +116,8 @@ export default function CalorieCalculator() {
                   onClick={() => setGender("female")}
                   className={`rounded-xl border px-4 py-3 text-sm font-medium transition ${
                     gender === "female"
-                      ? "border-black bg-black text-white"
-                      : "border-gray-200 bg-white text-gray-700 hover:bg-gray-50"
+                      ? "border-transparent bg-gradient-to-r from-indigo-600 to-violet-600 text-white"
+                      : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
                   }`}
                 >
                   Female
@@ -129,7 +129,7 @@ export default function CalorieCalculator() {
             <div>
               <label
                 htmlFor="age"
-                className="mb-2 block text-sm font-semibold text-gray-900"
+                className="mb-2 block text-sm font-semibold text-slate-900"
               >
                 Age
               </label>
@@ -142,7 +142,7 @@ export default function CalorieCalculator() {
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
                 placeholder="e.g. 25"
-                className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none transition focus:border-gray-400 focus:bg-white"
+                className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-slate-400 focus:bg-white"
               />
             </div>
 
@@ -150,7 +150,7 @@ export default function CalorieCalculator() {
             <div>
               <label
                 htmlFor="height"
-                className="mb-2 block text-sm font-semibold text-gray-900"
+                className="mb-2 block text-sm font-semibold text-slate-900"
               >
                 Height (cm)
               </label>
@@ -162,7 +162,7 @@ export default function CalorieCalculator() {
                 value={height}
                 onChange={(e) => setHeight(e.target.value)}
                 placeholder="e.g. 175"
-                className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none transition focus:border-gray-400 focus:bg-white"
+                className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-slate-400 focus:bg-white"
               />
             </div>
 
@@ -170,7 +170,7 @@ export default function CalorieCalculator() {
             <div>
               <label
                 htmlFor="weight"
-                className="mb-2 block text-sm font-semibold text-gray-900"
+                className="mb-2 block text-sm font-semibold text-slate-900"
               >
                 Weight (kg)
               </label>
@@ -182,7 +182,7 @@ export default function CalorieCalculator() {
                 value={weight}
                 onChange={(e) => setWeight(e.target.value)}
                 placeholder="e.g. 70"
-                className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none transition focus:border-gray-400 focus:bg-white"
+                className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-slate-400 focus:bg-white"
               />
             </div>
 
@@ -190,7 +190,7 @@ export default function CalorieCalculator() {
             <div className="sm:col-span-2">
               <label
                 htmlFor="activity"
-                className="mb-2 block text-sm font-semibold text-gray-900"
+                className="mb-2 block text-sm font-semibold text-slate-900"
               >
                 Activity Level
               </label>
@@ -199,7 +199,7 @@ export default function CalorieCalculator() {
                 id="activity"
                 value={activity}
                 onChange={(e) => setActivity(e.target.value)}
-                className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none transition focus:border-gray-400 focus:bg-white"
+                className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-slate-400 focus:bg-white"
               >
                 <option value="1.2">
                   Sedentary — little or no exercise
@@ -225,7 +225,7 @@ export default function CalorieCalculator() {
             <button
               type="button"
               onClick={calculateCalories}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-gray-800"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 shadow-md shadow-indigo-500/25 hover:brightness-110 px-6 py-3 text-sm font-semibold text-white transition "
             >
               <Calculator size={17} />
               Calculate Calories
@@ -234,7 +234,7 @@ export default function CalorieCalculator() {
             <button
               type="button"
               onClick={resetCalculator}
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition hover:bg-gray-50"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
             >
               <RotateCcw size={17} />
               Reset
@@ -244,54 +244,54 @@ export default function CalorieCalculator() {
           {/* Result */}
           {result && (
             <div className="mt-8">
-              <h2 className="text-xl font-bold text-gray-900">
+              <h2 className="text-xl font-bold text-slate-900">
                 Your Estimated Daily Calories
               </h2>
 
               <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
-                <div className="rounded-xl border border-gray-200 bg-gray-50 p-5">
-                  <p className="text-sm text-gray-500">BMR</p>
-                  <p className="mt-2 text-2xl font-bold text-gray-900">
+                <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                  <p className="text-sm text-slate-500">BMR</p>
+                  <p className="mt-2 text-2xl font-bold text-slate-900">
                     {result.bmr}
                   </p>
-                  <p className="mt-1 text-xs text-gray-500">
+                  <p className="mt-1 text-xs text-slate-500">
                     calories/day
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-200 bg-gray-50 p-5">
-                  <p className="text-sm text-gray-500">
+                <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                  <p className="text-sm text-slate-500">
                     Maintenance
                   </p>
-                  <p className="mt-2 text-2xl font-bold text-gray-900">
+                  <p className="mt-2 text-2xl font-bold text-slate-900">
                     {result.maintenance}
                   </p>
-                  <p className="mt-1 text-xs text-gray-500">
+                  <p className="mt-1 text-xs text-slate-500">
                     calories/day
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-200 bg-gray-50 p-5">
-                  <p className="text-sm text-gray-500">
+                <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                  <p className="text-sm text-slate-500">
                     Weight Loss
                   </p>
-                  <p className="mt-2 text-2xl font-bold text-gray-900">
+                  <p className="mt-2 text-2xl font-bold text-slate-900">
                     {result.weightLoss}
                   </p>
-                  <p className="mt-1 text-xs text-gray-500">
+                  <p className="mt-1 text-xs text-slate-500">
                     estimated calories/day
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-200 bg-gray-50 p-5">
-                  <p className="text-sm text-gray-500">
+                <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                  <p className="text-sm text-slate-500">
                     Weight Gain
                   </p>
-                  <p className="mt-2 text-2xl font-bold text-gray-900">
+                  <p className="mt-2 text-2xl font-bold text-slate-900">
                     {result.weightGain}
                   </p>
-                  <p className="mt-1 text-xs text-gray-500">
+                  <p className="mt-1 text-xs text-slate-500">
                     estimated calories/day
                   </p>
                 </div>
@@ -301,13 +301,13 @@ export default function CalorieCalculator() {
           )}
 
           {/* Disclaimer */}
-          <div className="mt-7 flex gap-3 rounded-xl border border-gray-200 bg-gray-50 p-4">
+          <div className="mt-7 flex gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
             <Info
               size={19}
-              className="mt-0.5 shrink-0 text-gray-500"
+              className="mt-0.5 shrink-0 text-slate-500"
             />
 
-            <p className="text-sm leading-6 text-gray-600">
+            <p className="text-sm leading-6 text-slate-600">
               This calculator provides an estimate and is not medical
               advice. Individual calorie needs can vary based on
               health, body composition, lifestyle and other factors.
@@ -316,52 +316,52 @@ export default function CalorieCalculator() {
         </section>
 
         {/* How to use */}
-        <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
-          <h2 className="text-2xl font-bold text-gray-900">
+        <section className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-bold text-slate-900">
             How to Use the Calorie Calculator
           </h2>
 
-          <ol className="mt-5 space-y-4 text-gray-600">
+          <ol className="mt-5 space-y-4 text-slate-600">
             <li>
-              <strong className="text-gray-900">1. Select your gender:</strong>{" "}
+              <strong className="text-slate-900">1. Select your gender:</strong>{" "}
               Choose male or female.
             </li>
 
             <li>
-              <strong className="text-gray-900">2. Enter your age:</strong>{" "}
+              <strong className="text-slate-900">2. Enter your age:</strong>{" "}
               Enter your age in years.
             </li>
 
             <li>
-              <strong className="text-gray-900">3. Enter your measurements:</strong>{" "}
+              <strong className="text-slate-900">3. Enter your measurements:</strong>{" "}
               Enter your height in centimeters and weight in kilograms.
             </li>
 
             <li>
-              <strong className="text-gray-900">4. Select activity:</strong>{" "}
+              <strong className="text-slate-900">4. Select activity:</strong>{" "}
               Choose the activity level that best describes your routine.
             </li>
 
             <li>
-              <strong className="text-gray-900">5. Calculate:</strong>{" "}
+              <strong className="text-slate-900">5. Calculate:</strong>{" "}
               Click Calculate Calories to see your estimated daily needs.
             </li>
           </ol>
         </section>
 
         {/* Information */}
-        <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
-          <h2 className="text-2xl font-bold text-gray-900">
+        <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-bold text-slate-900">
             What Is a Calorie Calculator?
           </h2>
 
-          <p className="mt-4 leading-7 text-gray-600">
+          <p className="mt-4 leading-7 text-slate-600">
             A calorie calculator estimates the amount of energy your
             body may need each day. The calculation considers factors
             such as age, gender, height, weight and physical activity.
           </p>
 
-          <p className="mt-4 leading-7 text-gray-600">
+          <p className="mt-4 leading-7 text-slate-600">
             The result can be useful as a starting point when planning
             nutrition and fitness goals, but actual calorie requirements
             can differ from person to person.
@@ -369,38 +369,38 @@ export default function CalorieCalculator() {
         </section>
 
         {/* FAQ */}
-        <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
-          <h2 className="text-2xl font-bold text-gray-900">
+        <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-bold text-slate-900">
             Frequently Asked Questions
           </h2>
 
           <div className="mt-6 space-y-6">
 
             <div>
-              <h3 className="font-semibold text-gray-900">
+              <h3 className="font-semibold text-slate-900">
                 What does this calorie calculator calculate?
               </h3>
-              <p className="mt-2 text-sm leading-6 text-gray-600">
+              <p className="mt-2 text-sm leading-6 text-slate-600">
                 It estimates your BMR and daily calorie needs based
                 on your personal information and activity level.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900">
+              <h3 className="font-semibold text-slate-900">
                 What is BMR?
               </h3>
-              <p className="mt-2 text-sm leading-6 text-gray-600">
+              <p className="mt-2 text-sm leading-6 text-slate-600">
                 BMR stands for Basal Metabolic Rate. It estimates the
                 energy your body uses to maintain basic functions at rest.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900">
+              <h3 className="font-semibold text-slate-900">
                 Is the calorie result exact?
               </h3>
-              <p className="mt-2 text-sm leading-6 text-gray-600">
+              <p className="mt-2 text-sm leading-6 text-slate-600">
                 No. It is an estimate. Actual calorie requirements vary
                 between individuals.
               </p>
