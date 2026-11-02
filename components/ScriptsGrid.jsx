@@ -7,8 +7,9 @@ const scripts = [
     description:
       "A colorful, playable HTML5 worm arcade game built with HTML, CSS and JavaScript. then get the complete source code for free and customize your own browser game.",
     image:
-      "Neon-Blue-Coding-Workspace-1.webp",
+      "https://i.ibb.co/Q7w70bmR/Neon-Blue-Coding-Workspace-1.webp",
     driveUrl: "https://drive.google.com/file/d/17ANqV6qredCMBjCQ9BoQrzWUgmf9wSRb/view?usp=drive_link",
+    tag: "HTML5 Game"
   },
   {
     id: 2,
@@ -16,8 +17,9 @@ const scripts = [
     description:
       "A complete, mobile-friendly underwater survival game built with HTML, CSS, and JavaScript in a single index.html file. Players eat smaller fish to grow, avoid larger predators, unlock new growth levels, and explore a colorful underwater world. Includes AI fish, touch joystick controls, boost mechanics, missions, score tracking, and responsive mobile gameplay. Ideal for developers who want to customize the game or convert it into an Android app using AppCreator24.",
     image:
-      "Neon-Blue-Coding-Workspace-1.webp",
+      "https://i.ibb.co/Q7w70bmR/Neon-Blue-Coding-Workspace-1.webp",
     driveUrl: "https://drive.google.com/file/d/16x8afVjwQIvtZ-tgf5tuLjxspgseegyl/view?usp=drive_link",
+    tag: "HTML5 Game"
   },
   {
     id: 3,
@@ -25,8 +27,9 @@ const scripts = [
     description:
       "Create a fun, colorful, mobile-friendly snake arena game using HTML, CSS, and JavaScript in a single index.html file. Features include AI snakes, food collection, snake growth, power-ups, coins, missions, a minimap, leaderboards, and responsive touch controls.",
     image:
-      "Neon-Blue-Coding-Workspace-1.webp",
+      "https://i.ibb.co/Q7w70bmR/Neon-Blue-Coding-Workspace-1.webp",
     driveUrl: "https://drive.google.com/file/d/1xh8hiB-Uk22YLXXjZ4YVHwEmPOTMQA21/view?usp=drive_link",
+    tag: "HTML5 Game"
   },
   
 ];
@@ -58,7 +61,7 @@ export default function ScriptsGrid() {
                 className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
               />
               <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-violet-700 shadow-sm backdrop-blur">
-                <Code2 size={13} /> HTML5 Game
+                <Code2 size={13} /> {script.tag}
               </span>
             </div>
 
