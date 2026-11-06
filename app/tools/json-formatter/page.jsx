@@ -1,6 +1,7 @@
 
 import JsonFormatterPage from "./JSONFormatter&Validator";
 import AdSlot from "@/components/AdSlot";
+import ToolAbout from "@/components/ToolAbout";
 
 
 export const metadata = {
@@ -13,6 +14,7 @@ export default function Page() {
   return (
     <>
       <JsonFormatterPage />
+      <ToolAbout slug="json-formatter" />
       <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
     </>
   );

@@ -28,7 +28,7 @@ export default function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-            Calculators, image tools, text utilities and developer helpers — all in one clean place.
+            Math, finance, health, image, text and developer tools — all in one clean place.
             No signup, no clutter.
           </p>
 

@@ -1,226 +1,90 @@
+import LegalPage from "@/components/LegalPage";
+import { SITE } from "@/lib/site";
+
 export const metadata = {
-  title: "Terms of Use - MasterKit",
+  title: "Terms of Use",
   description:
-    "Read the Terms of Use for MasterKit, including acceptable use, tool accuracy, third-party services, and website usage.",
+    "Terms of Use for MasterKit: rules for using our free online tools and scripts, disclaimers, intellectual property and limitations of liability.",
+  alternates: { canonical: `${SITE.url}/terms` },
 };
+
+const sections = [
+  {
+    h: "Acceptance of terms",
+    p: [
+      `By accessing or using ${SITE.name} (${SITE.url}) you agree to these Terms of Use and our Privacy Policy. If you do not agree, please stop using the website.`,
+    ],
+  },
+  {
+    h: "Use of the website",
+    p: ["You may use MasterKit for lawful personal, educational and commercial purposes. You agree not to:"],
+    list: [
+      "Use the site in any way that violates applicable laws or regulations.",
+      "Attempt to disrupt, overload, scrape at high volume or gain unauthorised access to the site or its servers.",
+      "Upload or process content that is illegal, infringing or harmful.",
+      "Click on advertisements artificially or encourage others to do so.",
+    ],
+  },
+  {
+    h: "Accuracy of tools and results",
+    p: [
+      "We work hard to make our tools accurate, but we do not guarantee that results are error-free, complete or suitable for your situation. Health, finance, exam and academic results are estimates for general guidance only. Please verify important figures before relying on them.",
+    ],
+  },
+  {
+    h: "No professional advice",
+    p: [
+      "Nothing on MasterKit is medical, financial, legal or other professional advice. Always consult a qualified professional before making decisions about your health, loans, investments or legal matters.",
+    ],
+  },
+  {
+    h: "Free scripts and source codes",
+    p: [
+      "Downloadable scripts and HTML5 game source codes are provided as is for learning and for use in your own projects. You may modify them for your own use. Unless a script states otherwise, you may not resell the unmodified source code as your own product or claim authorship of the original work.",
+    ],
+  },
+  {
+    h: "Intellectual property",
+    p: [
+      "The design, text, layout and original code of this website are owned by MasterKit and protected by applicable copyright laws. Third-party names, logos and trademarks, including YouTube, remain the property of their respective owners and are used only for identification.",
+    ],
+  },
+  {
+    h: "Advertising and third-party links",
+    p: [
+      "The site may display third-party advertising, including Google AdSense, and may link to external websites. We do not endorse or control third-party content and are not responsible for it. Your dealings with advertisers or external sites are solely between you and them.",
+    ],
+  },
+  {
+    h: "Availability and changes",
+    p: [
+      "We may add, change, suspend or remove tools and features at any time without notice. We do not guarantee that the site will always be available or free of interruptions or errors.",
+    ],
+  },
+  {
+    h: "Limitation of liability",
+    p: [
+      "To the fullest extent permitted by law, MasterKit and its owners are not liable for any direct, indirect, incidental or consequential loss or damage arising from your use of, or inability to use, the website, its tools or any downloaded files.",
+    ],
+  },
+  {
+    h: "Changes to these terms",
+    p: ["We may revise these terms from time to time. Continued use of the website after changes are posted means you accept the updated terms."],
+  },
+  {
+    h: "Contact",
+    p: [`Questions about these terms? Email ${SITE.email} or visit our Contact page.`],
+  },
+];
 
 export default function TermsPage() {
   return (
-    <main className="bg-white">
-      {/* Hero */}
-      <section className="border-b bg-slate-50">
-        <div className="mx-auto max-w-4xl px-6 py-16 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-            Terms of Use
-          </h1>
-
-          <p className="mt-4 text-slate-600">
-            Last updated: September 2026
-          </p>
-        </div>
-      </section>
-
-      {/* Content */}
-      <section className="mx-auto max-w-4xl px-6 py-14">
-        <div className="space-y-10 leading-7 text-slate-600">
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              1. Acceptance of Terms
-            </h2>
-
-            <p className="mt-4">
-              Welcome to MasterKit. By accessing or using this website, you
-              agree to comply with these Terms of Use. If you do not agree with
-              these terms, please do not use the website.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              2. About Our Services
-            </h2>
-
-            <p className="mt-4">
-              MasterKit provides free online calculators and useful tools for
-              general informational and everyday purposes. Our tools may
-              include calculators and utilities related to math, finance,
-              health, YouTube, images, text, SEO, and other categories.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              3. General Information Only
-            </h2>
-
-            <p className="mt-4">
-              The information and results provided by MasterKit are intended
-              for general informational purposes only. They should not be
-              considered professional financial, medical, legal, tax,
-              accounting, or other professional advice.
-            </p>
-
-            <p className="mt-4">
-              For important decisions, you should verify information with an
-              appropriately qualified professional or authoritative source.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              4. Accuracy of Results
-            </h2>
-
-            <p className="mt-4">
-              We make reasonable efforts to provide useful and accurate
-              calculators and tools. However, we do not guarantee that every
-              calculation, result, description, or piece of information will
-              always be complete, accurate, current, or error-free.
-            </p>
-
-            <p className="mt-4">
-              You are responsible for checking results before relying on them
-              for important decisions.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              5. Acceptable Use
-            </h2>
-
-            <p className="mt-4">
-              You agree to use MasterKit only for lawful purposes and in a way
-              that does not interfere with the operation or security of the
-              website.
-            </p>
-
-            <p className="mt-4">You must not:</p>
-
-            <ul className="mt-4 list-disc space-y-2 pl-6">
-              <li>Attempt to damage or disrupt the website.</li>
-              <li>Attempt to gain unauthorized access to our systems.</li>
-              <li>Use automated methods to abuse or overload our services.</li>
-              <li>Use our tools for unlawful activities.</li>
-              <li>Attempt to bypass security or technical restrictions.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              6. Intellectual Property
-            </h2>
-
-            <p className="mt-4">
-              Unless otherwise stated, the website's original content,
-              branding, design, text, graphics, and functionality are owned
-              by or licensed to MasterKit.
-            </p>
-
-            <p className="mt-4">
-              You may use our tools for their intended personal or lawful
-              purposes. You may not copy, reproduce, redistribute, or
-              republish substantial portions of our website without
-              appropriate permission.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              7. Third-Party Services and Links
-            </h2>
-
-            <p className="mt-4">
-              MasterKit may use or link to third-party services, websites,
-              APIs, advertising platforms, or other external resources.
-            </p>
-
-            <p className="mt-4">
-              We do not control third-party websites or services and are not
-              responsible for their content, availability, policies, or
-              practices. Your use of third-party services may be subject to
-              their own terms and privacy policies.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              8. Advertising
-            </h2>
-
-            <p className="mt-4">
-              MasterKit may display advertisements from third-party
-              advertising providers. Advertisements may be selected or
-              delivered based on various factors and may use cookies or
-              similar technologies according to the applicable advertising
-              provider's policies.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              9. Availability
-            </h2>
-
-            <p className="mt-4">
-              We aim to keep Calculator available and functional, but we do
-              not guarantee that the website or every tool will always be
-              available, uninterrupted, or free from technical errors.
-            </p>
-
-            <p className="mt-4">
-              We may modify, update, suspend, or discontinue any part of the
-              website or its tools without prior notice.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              10. Limitation of Liability
-            </h2>
-
-            <p className="mt-4">
-              To the extent permitted by applicable law, Calculator and its
-              operators will not be responsible for losses, damages, or
-              consequences resulting from your use of the website, reliance on
-              calculator results, temporary unavailability, technical errors,
-              or information obtained through third-party services.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              11. Changes to These Terms
-            </h2>
-
-            <p className="mt-4">
-              We may update these Terms of Use from time to time. Changes will
-              be posted on this page with an updated revision date. Your
-              continued use of the website after changes are posted means that
-              you accept the updated terms.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              12. Contact Us
-            </h2>
-
-            <p className="mt-4">
-              If you have questions about these Terms of Use, please visit our{" "}
-              <a
-                href="/contact"
-                className="font-medium text-slate-900 underline underline-offset-4"
-              >
-                Contact Us
-              </a>{" "}
-              page.
-            </p>
-          </section>
-
-        </div>
-      </section>
-    </main>
+    <LegalPage
+      eyebrow="Legal"
+      title="Terms of Use"
+      intro="The rules for using MasterKit and its free tools and scripts."
+      updated={SITE.updated}
+      sections={sections}
+    />
   );
 }

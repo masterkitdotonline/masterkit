@@ -1,5 +1,6 @@
 import MathKit from "./MathKit";
 import AdSlot from "@/components/AdSlot";
+import ToolAbout from "@/components/ToolAbout";
 
 export const metadata = {
   title: "MathKit - Free Online Math Toolkit & Scientific Calculator",
@@ -20,6 +21,7 @@ export default function Page() {
   return (
     <>
       <MathKit />
+      <ToolAbout slug="mathkit" />
       <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
     </>
   );

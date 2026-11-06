@@ -19,12 +19,12 @@ export const metadata = {
   metadataBase: new URL("https://masterkit.online"),
 
   title: {
-    default: "MasterKit - Free Online Tools & Calculators",
+    default: "MasterKit - Free Online Tools",
     template: "%s | MasterKit",
   },
 
   description:
-    "MasterKit offers free online tools and calculators including BMI Calculator, Loan Calculator, Percentage Calculator, Image Resizer, Word Counter, JSON Formatter and more.",
+    "MasterKit offers free online tools including BMI Calculator, Loan Calculator, Percentage Calculator, Image Resizer, Word Counter, JSON Formatter, Text Repeater, Time Table Maker and more.",
 
   keywords: [
     "free online tools",
@@ -65,16 +65,16 @@ export const metadata = {
     locale: "en_US",
     url: "https://masterkit.online",
     siteName: "MasterKit",
-    title: "MasterKit - Free Online Tools & Calculators",
+    title: "MasterKit - Free Online Tools",
     description:
-      "Free online calculators and useful tools for math, finance, health, images, text, YouTube, developer tasks and SEO.",
+      "Free online tools for math, finance, health, education, images, text, YouTube and developer tasks. No signup required.",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "MasterKit - Free Online Tools & Calculators",
+    title: "MasterKit - Free Online Tools",
     description:
-      "Free online tools and calculators for everyday tasks. No signup required.",
+      "Free online tools for everyday tasks. No signup required.",
   },
 
   alternates: {

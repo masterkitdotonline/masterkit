@@ -187,3 +187,14 @@ body {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ---------- Printing (Time Table Maker etc.) ---------- */
+@media print {
+  header, footer, nav { display: none !important; }
+  body { background: #fff !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+@page {
+  margin: 12mm;
+}

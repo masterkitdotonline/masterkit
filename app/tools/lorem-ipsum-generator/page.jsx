@@ -1,5 +1,6 @@
 import LoremIpsumGenerator from "./LoremIpsumGenerator";
 import AdSlot from "@/components/AdSlot";
+import ToolAbout from "@/components/ToolAbout";
 
 export const metadata = {
   title: "Lorem Ipsum Generator",
@@ -29,6 +30,7 @@ export default function Page() {
   return (
     <>
       <LoremIpsumGenerator />
+      <ToolAbout slug="lorem-ipsum-generator" />
       <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
     </>
   );

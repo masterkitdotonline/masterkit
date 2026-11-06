@@ -1,5 +1,6 @@
 import BMICalculator from "./BMICalculator";
 import AdSlot from "@/components/AdSlot";
+import ToolAbout from "@/components/ToolAbout";
 
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function Page() {
   return (
     <>
       <BMICalculator />
+      <ToolAbout slug="bmi-calculator" />
       <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
     </>
   );

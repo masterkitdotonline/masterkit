@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown, Layers, ArrowRight } from "lucide-react";
 import ToolIcon from "@/components/ToolIcon";
@@ -29,11 +29,36 @@ export function Logo({ light = false }) {
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
+  const toolsRef = useRef(null);
 
   const closeAll = () => {
     setMenuOpen(false);
     setToolsOpen(false);
   };
+
+  // Dropdown ke bahar click ya Escape par band karo
+  useEffect(() => {
+    if (!toolsOpen) return;
+
+    const handleClickOutside = (e) => {
+      if (toolsRef.current && !toolsRef.current.contains(e.target)) {
+        setToolsOpen(false);
+      }
+    };
+    const handleEscape = (e) => {
+      if (e.key === "Escape") setToolsOpen(false);
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [toolsOpen]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl">
@@ -48,7 +73,7 @@ export default function Header() {
             Home
           </Link>
 
-          <div className="relative">
+          <div className="relative" ref={toolsRef}>
             <button
               type="button"
               aria-expanded={toolsOpen}

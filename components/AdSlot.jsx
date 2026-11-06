@@ -24,7 +24,7 @@ export default function AdSlot({ slot, className = "" }) {
   if (!client || !slot) return null;
 
   return (
-    <aside aria-label="Advertisement" className={`mx-auto my-10 w-full max-w-4xl px-4 ${className}`}>
+    <aside aria-label="Advertisement" className={`mx-auto my-10 w-full max-w-4xl px-4 print:hidden ${className}`}>
       <p className="mb-1 text-center text-[10px] font-medium uppercase tracking-widest text-slate-400">
         Advertisement
       </p>

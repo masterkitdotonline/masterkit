@@ -1,5 +1,6 @@
 import NegativeMarksCalculator from "./NegativeMarksCalculator";
 import AdSlot from "@/components/AdSlot";
+import ToolAbout from "@/components/ToolAbout";
 
 export const metadata = {
   title: "Negative Marks Calculator - Exam Score with Negative Marking",
@@ -20,6 +21,7 @@ export default function Page() {
   return (
     <>
       <NegativeMarksCalculator />
+      <ToolAbout slug="negative-marks-calculator" />
       <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
     </>
   );

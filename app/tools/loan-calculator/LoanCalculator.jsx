@@ -212,7 +212,7 @@ export default function LoanCalculatorPage() {
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <button
                   type="submit"
-                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-slate-900 px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-slate-800"
+                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-slate-900 px-5 py-3.5 text-sm font-semibold text-white transition bg-gradient-to-r from-indigo-600 to-violet-600 hover:bg-gradient-to-r from-indigo-500 to-violet-700"
                 >
                   <Calculator size={18} />
                   Calculate Loan

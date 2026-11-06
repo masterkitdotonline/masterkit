@@ -1,5 +1,6 @@
 import DiscountCalculator from "./DiscountCalculator";
 import AdSlot from "@/components/AdSlot";
+import ToolAbout from "@/components/ToolAbout";
 
 export const metadata = {
   title: "Discount Calculator",
@@ -25,6 +26,7 @@ export default function Page() {
   return (
     <>
       <DiscountCalculator />
+      <ToolAbout slug="discount-calculator" />
       <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
     </>
   );

@@ -1,167 +1,69 @@
+import LegalPage from "@/components/LegalPage";
+import { SITE } from "@/lib/site";
+
+export const metadata = {
+  title: "About Us",
+  description:
+    "Learn about MasterKit – a free collection of online tools for math, finance, health, education, text, images and development, plus free HTML5 game source codes. No signup required.",
+  alternates: { canonical: `${SITE.url}/about` },
+};
+
+const sections = [
+  {
+    h: "Who we are",
+    p: [
+      "MasterKit is an independent website that offers free online tools for everyday tasks. We build tools such as calculators, text utilities, image helpers, planners and developer utilities that open instantly in your browser, with no installation, no account and no payment.",
+      "The project started with a simple frustration: many online tools are slow, cluttered or hide basic features behind sign-ups. We wanted a clean place where a student, a freelancer, a developer or a small business owner can get an answer in a few seconds and move on.",
+    ],
+  },
+  {
+    h: "What you will find on MasterKit",
+    list: [
+      "Math and education tools – a scientific MathKit, percentage, area and negative marks calculators, and a printable time table maker.",
+      "Finance and health tools – loan, compound interest and discount calculators, plus BMI and daily calorie estimators.",
+      "Text and developer tools – word counter, text repeater, lorem ipsum generator and a JSON formatter and validator.",
+      "Image and YouTube tools – an image resizer and compressor and a YouTube thumbnail downloader.",
+      "Free HTML5 games – ready-to-use game source codes that you can download, study and customise for your own projects.",
+    ],
+  },
+  {
+    h: "How our tools work",
+    p: [
+      "Most MasterKit tools run entirely in your browser. When you type text, paste JSON or choose an image, the processing happens on your own device, so the content you enter is not uploaded to our servers. Tools that need an external resource, such as the YouTube thumbnail downloader, only request the public image that you ask for.",
+      "Every tool page includes a short guide explaining what the tool does, how the result is calculated and what to keep in mind, so you understand the answer instead of just copying it.",
+    ],
+  },
+  {
+    h: "Our editorial and quality standards",
+    list: [
+      "Accuracy first – formulas are written from standard, publicly documented methods and tested with known examples before release.",
+      "Clear explanations – each tool explains its inputs, its output and its limits in plain language.",
+      "Honest limits – our health, finance and exam tools give estimates for guidance only and never replace professional advice.",
+      "Continuous improvement – we fix reported errors quickly and add new tools based on what visitors ask for.",
+    ],
+  },
+  {
+    h: "How the site is funded",
+    p: [
+      "MasterKit is free to use. To cover hosting and development costs, the site may display advertising from third-party networks such as Google AdSense. Ads are clearly separated from tool results and we do not allow ads that are misleading or inappropriate. You can read how advertising and cookies work in our Privacy Policy.",
+    ],
+  },
+  {
+    h: "Get in touch",
+    p: [
+      `Found a mistake, want a new tool, or need help? Email us at ${SITE.email} or message us on WhatsApp. We aim to reply ${SITE.responseTime}. Your feedback directly shapes what we build next.`,
+    ],
+  },
+];
+
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-slate-50">
-
-      {/* Hero */}
-      <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">
-            About MasterKit
-          </p>
-
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-            Simple Online Calculators & Useful Tools
-          </h1>
-
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-            MasterKit is a collection of simple online tools designed to help
-            you perform everyday calculations and tasks quickly and easily.
-          </p>
-        </div>
-      </section>
-
-      {/* Content */}
-      <section className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
-
-        <div className="space-y-8">
-
-          {/* About */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
-            <h2 className="text-2xl font-bold text-slate-900">
-              What is MasterKit?
-            </h2>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              MasterKit provides free online calculators and practical tools
-              for common tasks. Our goal is to make useful calculations easier
-              to access without requiring users to install software or create
-              an account.
-            </p>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              The website covers different categories including mathematics,
-              finance, health, YouTube, images, text, SEO and developer tools.
-              Each tool is designed with a simple interface so users can enter
-              their information and get results without unnecessary steps.
-            </p>
-          </div>
-
-          {/* What We Offer */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
-            <h2 className="text-2xl font-bold text-slate-900">
-              What We Offer
-            </h2>
-
-            <div className="mt-6 grid gap-5 sm:grid-cols-2">
-              <div className="rounded-xl bg-slate-50 p-5">
-                <h3 className="font-semibold text-slate-900">
-                  Mathematical Calculators
-                </h3>
-
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Tools for percentages, areas and other everyday
-                  mathematical calculations.
-                </p>
-              </div>
-
-              <div className="rounded-xl bg-slate-50 p-5">
-                <h3 className="font-semibold text-slate-900">
-                  Finance Tools
-                </h3>
-
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Useful calculators for common financial calculations such as
-                  loans and payments.
-                </p>
-              </div>
-
-              <div className="rounded-xl bg-slate-50 p-5">
-                <h3 className="font-semibold text-slate-900">
-                  YouTube Tools
-                </h3>
-
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Practical tools for creators working with YouTube content.
-                </p>
-              </div>
-
-              <div className="rounded-xl bg-slate-50 p-5">
-                <h3 className="font-semibold text-slate-900">
-                  Productivity Tools
-                </h3>
-
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Simple tools for text, images, SEO, development and other
-                  everyday tasks.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Our Approach */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
-            <h2 className="text-2xl font-bold text-slate-900">
-              Our Approach
-            </h2>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              We focus on creating tools that are straightforward and easy to
-              understand. Each calculator should clearly explain what it does,
-              what information is required, and how the result is calculated.
-            </p>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              We also aim to improve existing tools and add new tools based on
-              common user needs.
-            </p>
-          </div>
-
-          {/* Accuracy */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
-            <h2 className="text-2xl font-bold text-slate-900">
-              Accuracy and Information
-            </h2>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              Our calculators are intended for general informational and
-              practical use. Results may depend on the information entered by
-              the user and the assumptions used by a particular calculator.
-            </p>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              For important financial, medical, legal or professional
-              decisions, users should verify results with an appropriately
-              qualified professional or authoritative source.
-            </p>
-          </div>
-
-          {/* Free Access */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
-            <h2 className="text-2xl font-bold text-slate-900">
-              Free and Accessible
-            </h2>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              Our tools are designed to be accessible directly from a web
-              browser. We aim to keep the experience simple, fast and useful
-              across desktop, tablet and mobile devices.
-            </p>
-          </div>
-
-          {/* Contact */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center sm:p-8">
-            <h2 className="text-2xl font-bold text-slate-900">
-              Have a Suggestion?
-            </h2>
-
-            <p className="mx-auto mt-3 max-w-xl leading-7 text-slate-600">
-              If you have an idea for a useful calculator or tool, you can
-              contact us and share your suggestion.
-            </p>
-          </div>
-
-        </div>
-      </section>
-    </main>
+    <LegalPage
+      eyebrow="About MasterKit"
+      title="Simple online tools, built to be useful"
+      intro="Free online tools for math, finance, health, text, images and development, plus HTML5 game source codes – fast, private and easy to use."
+      sections={sections}
+      cta={{ title: "Ready to try a tool?", text: "Browse all free tools – no signup, no installation.", href: "/tools", label: "Explore all tools" }}
+    />
   );
 }

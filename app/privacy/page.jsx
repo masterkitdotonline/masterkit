@@ -1,233 +1,110 @@
+import LegalPage from "@/components/LegalPage";
+import { SITE } from "@/lib/site";
+
 export const metadata = {
-  title: "Privacy Policy - MasterKit",
+  title: "Privacy Policy",
   description:
-    "Read the Privacy Policy for MasterKit and learn how we handle information, cookies, advertising, and third-party services.",
+    "MasterKit Privacy Policy: what information we collect, how cookies, Google Analytics and Google AdSense are used, and the choices you have.",
+  alternates: { canonical: `${SITE.url}/privacy` },
 };
+
+const sections = [
+  {
+    h: "Introduction",
+    p: [
+      `This Privacy Policy explains how ${SITE.name} (${SITE.url}) collects, uses and protects information when you visit our website. By using the site you agree to the practices described here. If you do not agree, please do not use the site.`,
+    ],
+  },
+  {
+    h: "Information we do not collect",
+    p: [
+      "You do not need an account to use MasterKit. Most of our tools run directly in your browser, so the text, numbers, JSON or images you enter are processed on your own device and are not sent to or stored on our servers.",
+    ],
+  },
+  {
+    h: "Information collected automatically",
+    p: ["Like most websites, we and our service providers may automatically receive limited technical information when you visit:"],
+    list: [
+      "Browser type and version, device type, operating system and screen size.",
+      "Approximate location (country or city level) derived from your IP address.",
+      "Pages visited, time spent, referring website and general interaction data.",
+    ],
+    after: ["This data is used in aggregate to understand how the site is used, to keep it secure and to improve our tools."],
+  },
+  {
+    h: "Cookies and similar technologies",
+    p: [
+      "Cookies are small files stored on your device. We and our partners use cookies and similar technologies for analytics, to remember basic preferences and to show and measure advertising. You can delete or block cookies in your browser settings, although some parts of the site may not work as intended without them.",
+    ],
+  },
+  {
+    h: "Google Analytics",
+    p: [
+      "We use Google Analytics to understand how visitors use the site, for example which tools are popular. Google Analytics uses cookies to collect usage information and reports it to us in aggregated form. You can learn more at policies.google.com/technologies/partner-sites and opt out with the Google Analytics Opt-out Browser Add-on.",
+    ],
+  },
+  {
+    h: "Advertising and Google AdSense",
+    p: [
+      "MasterKit may display advertisements served by third-party vendors, including Google. Third-party vendors, including Google, use cookies to serve ads based on a user's previous visits to this website or other websites.",
+      "Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the internet.",
+      "You may opt out of personalised advertising by visiting Google Ads Settings (adssettings.google.com). You can also opt out of some third-party vendors' use of cookies for personalised advertising by visiting www.aboutads.info.",
+      "Where required by law, such as in the European Economic Area and the United Kingdom, we request your consent before personalised ads or non-essential cookies are used.",
+    ],
+  },
+  {
+    h: "Third-party websites and services",
+    p: [
+      "Our site may contain links to other websites, such as Google Drive for script downloads or YouTube. We do not control these sites and are not responsible for their content or privacy practices. We encourage you to read the privacy policy of every site you visit.",
+    ],
+  },
+  {
+    h: "Local storage",
+    p: [
+      "Some tools, such as the Time Table Maker, may save your work in your browser's local storage so it is still there when you return. This data stays on your device, and you can remove it at any time by clearing your browser data.",
+    ],
+  },
+  {
+    h: "Children's privacy",
+    p: [
+      "MasterKit is intended for a general audience and is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided personal information, please contact us and we will take appropriate steps.",
+    ],
+  },
+  {
+    h: "Your rights and choices",
+    p: ["Depending on where you live, you may have rights to access, correct, delete or restrict the use of your personal data, and to object to or withdraw consent for certain processing. You can:"],
+    list: [
+      "Block or delete cookies using your browser settings.",
+      "Opt out of personalised advertising through Google Ads Settings or aboutads.info.",
+      "Contact us to ask a question about data connected to your visit.",
+    ],
+  },
+  {
+    h: "Data security",
+    p: [
+      "We take reasonable technical measures to protect the site. However, no method of transmission or storage on the internet is completely secure, so we cannot guarantee absolute security.",
+    ],
+  },
+  {
+    h: "Changes to this policy",
+    p: [
+      "We may update this Privacy Policy from time to time. Changes take effect when they are posted on this page, and the date at the top shows when it was last revised.",
+    ],
+  },
+  {
+    h: "Contact us",
+    p: [`Questions about this policy? Email ${SITE.email} or use our Contact page.`],
+  },
+];
 
 export default function PrivacyPage() {
   return (
-    <main className="bg-white">
-      {/* Hero */}
-      <section className="border-b bg-slate-50">
-        <div className="mx-auto max-w-4xl px-6 py-16 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-            Privacy Policy
-          </h1>
-
-          <p className="mt-4 text-slate-600">
-            Last updated: September 2026
-          </p>
-        </div>
-      </section>
-
-      {/* Content */}
-      <section className="mx-auto max-w-4xl px-6 py-14">
-        <div className="space-y-10 leading-7 text-slate-600">
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              1. Introduction
-            </h2>
-
-            <p className="mt-4">
-              Welcome to MasterKit. We provide free online calculators and
-              useful tools for everyday tasks, including math, finance,
-              health, YouTube, image, text, SEO, and developer-related tools.
-            </p>
-
-            <p className="mt-4">
-              Your privacy is important to us. This Privacy Policy explains
-              what information may be collected when you use our website and
-              how that information may be used.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              2. Information We Collect
-            </h2>
-
-            <p className="mt-4">
-              Most of the tools on MasterKit can be used without creating an
-              account or providing personal information.
-            </p>
-
-            <p className="mt-4">
-              Depending on how you use the website, information may be
-              collected automatically by our hosting, analytics, advertising,
-              or other third-party service providers. This may include
-              information such as browser type, device type, approximate
-              location, pages visited, referring pages, and general usage
-              information.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              3. How We Use Information
-            </h2>
-
-            <p className="mt-4">
-              Information may be used to:
-            </p>
-
-            <ul className="mt-4 list-disc space-y-2 pl-6">
-              <li>Operate and maintain our website.</li>
-              <li>Improve our calculators and tools.</li>
-              <li>Understand how visitors use our website.</li>
-              <li>Detect technical problems and security issues.</li>
-              <li>Improve website performance and user experience.</li>
-              <li>Display and measure relevant advertising.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              4. Cookies
-            </h2>
-
-            <p className="mt-4">
-              MasterKit and third-party services used on the website may use
-              cookies or similar technologies. Cookies can help websites
-              remember preferences, understand website usage, measure
-              advertising performance, and provide relevant advertisements.
-            </p>
-
-            <p className="mt-4">
-              You can control or disable cookies through your browser settings.
-              Disabling certain cookies may affect some website functionality.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              5. Google AdSense and Advertising
-            </h2>
-
-            <p className="mt-4">
-              We may use Google AdSense or other advertising services to
-              display advertisements on our website.
-            </p>
-
-            <p className="mt-4">
-              Advertising providers may use cookies or similar technologies
-              to show advertisements based on a user's visits to this and
-              other websites, subject to the provider's applicable policies
-              and settings.
-            </p>
-
-            <p className="mt-4">
-              Users may be able to manage personalized advertising preferences
-              through Google's advertising settings and other available
-              privacy controls.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              6. Third-Party Services
-            </h2>
-
-            <p className="mt-4">
-              Our website may use third-party services for hosting, analytics,
-              security, advertising, or other website functionality.
-            </p>
-
-            <p className="mt-4">
-              These third parties may process information according to their
-              own privacy policies. We recommend reviewing the privacy
-              policies of third-party services when applicable.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              7. Calculator and Tool Data
-            </h2>
-
-            <p className="mt-4">
-              Many Calculator tools process information directly in your
-              browser. We do not require an account to use these tools.
-            </p>
-
-            <p className="mt-4">
-              However, specific tools may work differently depending on their
-              functionality and any third-party services they use. Avoid
-              entering highly sensitive personal information into any online
-              tool unless you understand how that tool processes the data.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              8. Children's Privacy
-            </h2>
-
-            <p className="mt-4">
-              MasterKit is a general-purpose website and is not specifically
-              directed toward children. We do not knowingly request personal
-              information from children through our website.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              9. Data Security
-            </h2>
-
-            <p className="mt-4">
-              We take reasonable measures to help protect our website and
-              information processed through it. However, no internet
-              transmission or electronic storage system can be guaranteed to
-              be completely secure.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              10. External Links
-            </h2>
-
-            <p className="mt-4">
-              Our website may contain links to external websites or services.
-              We are not responsible for the privacy practices, content, or
-              security of third-party websites. Please review their respective
-              privacy policies before providing information.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              11. Changes to This Privacy Policy
-            </h2>
-
-            <p className="mt-4">
-              We may update this Privacy Policy from time to time to reflect
-              changes to our website, services, or legal requirements. Any
-              updates will be posted on this page with a revised update date.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">
-              12. Contact Us
-            </h2>
-
-            <p className="mt-4">
-              If you have questions about this Privacy Policy or our privacy
-              practices, please visit our{" "}
-              <a
-                href="/contact"
-                className="font-medium text-slate-900 underline underline-offset-4"
-              >
-                Contact Us
-              </a>{" "}
-              page.
-            </p>
-          </section>
-
-        </div>
-      </section>
-    </main>
+    <LegalPage
+      eyebrow="Legal"
+      title="Privacy Policy"
+      intro="How we handle information, cookies, analytics and advertising on MasterKit."
+      updated={SITE.updated}
+      sections={sections}
+    />
   );
 }
