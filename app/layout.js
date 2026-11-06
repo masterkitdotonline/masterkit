@@ -41,6 +41,10 @@ export const metadata = {
     "developer tools",
     "SEO tools",
     "Mathkit",
+    "Text repeater",
+    "text repeter",
+    "repeat text",
+    "sms repeater"
     
   ],
 
@@ -122,6 +126,9 @@ export default function RootLayout({ children }) {
     gtag('config', 'G-DVMVXH5WCG');
   `}
 </Script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5150366301041199"
+     crossorigin="anonymous"></script>
+
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
