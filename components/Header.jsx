@@ -60,6 +60,21 @@ export default function Header() {
     };
   }, [toolsOpen]);
 
+  // Mobile menu khula ho to body scroll lock, aur desktop size par menu band
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+
+    const onResize = () => {
+      if (window.innerWidth >= 768) setMenuOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("resize", onResize);
+    };
+  }, [menuOpen]);
+
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -69,7 +84,10 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">
-          <Link href="/" className="rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <Link
+            href="/"
+            className="rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+          >
             Home
           </Link>
 
@@ -111,14 +129,21 @@ export default function Header() {
           </div>
 
           {navLinks.slice(1).map((l) => (
-            <Link key={l.href} href={l.href} className="rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+            <Link
+              key={l.href}
+              href={l.href}
+              className="rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+            >
               {l.name}
             </Link>
           ))}
         </nav>
 
         <div className="hidden md:block">
-          <Link href="/tools" className="btn-primary inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold">
+          <Link
+            href="/tools"
+            className="btn-primary inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold"
+          >
             Explore Tools <ArrowRight size={16} />
           </Link>
         </div>
@@ -139,24 +164,52 @@ export default function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div id="mobile-navigation" className="max-h-[80vh] overflow-y-auto border-t border-slate-200 bg-white px-4 pb-6 pt-3 md:hidden">
+        <div
+          id="mobile-navigation"
+          className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-slate-200 bg-white px-4 pb-8 pt-3 md:hidden"
+        >
           <div className="space-y-1">
             {navLinks.map((l) => (
-              <Link key={l.href} href={l.href} onClick={closeAll} className="block rounded-xl px-3 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100">
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={closeAll}
+                className="block rounded-xl px-3 py-3 text-sm font-semibold text-slate-700 active:bg-slate-100"
+              >
                 {l.name}
               </Link>
             ))}
           </div>
 
-          <p className="px-3 pb-2 pt-5 text-xs font-bold uppercase tracking-wider text-slate-400">Popular Tools</p>
-          <div className="grid grid-cols-2 gap-2">
+          <p className="px-3 pb-2 pt-5 text-xs font-bold uppercase tracking-wider text-slate-400">
+            Popular Tools
+          </p>
+
+          <div className="grid grid-cols-1 gap-2 min-[400px]:grid-cols-2">
             {popularTools.map((tool) => (
-              <Link key={tool.href} href={tool.href} onClick={closeAll} className="flex min-w-0 items-center gap-2.5 rounded-xl border border-slate-200 bg-white p-2.5 hover:bg-slate-50">
-                <ToolIcon icon={tool.icon} theme={tool.theme} size="sm" />
-                <span className="text-sm font-semibold text-slate-700">{tool.short}</span>
+              <Link
+                key={tool.href}
+                href={tool.href}
+                onClick={closeAll}
+                className="flex min-w-0 items-center gap-2.5 rounded-xl border border-slate-200 bg-white p-2.5 active:bg-slate-100"
+              >
+                <span className="shrink-0">
+                  <ToolIcon icon={tool.icon} theme={tool.theme} size="sm" />
+                </span>
+                <span className="line-clamp-2 min-w-0 flex-1 break-words text-sm font-semibold leading-tight text-slate-700">
+                  {tool.short}
+                </span>
               </Link>
             ))}
           </div>
+
+          <Link
+            href="/tools"
+            onClick={closeAll}
+            className="mt-4 flex items-center justify-center gap-1 rounded-xl bg-indigo-50 p-3 text-sm font-semibold text-indigo-600"
+          >
+            View all tools <ArrowRight size={15} />
+          </Link>
         </div>
       )}
     </header>

@@ -1,5 +1,6 @@
 import { Mail, MessageCircle, Clock, Lightbulb, Bug } from "lucide-react";
 import ContactActions from "@/components/ContactActions";
+import AdsterraBanner from "@/components/AdsterraBanner";
 import { SITE, mailto, whatsappLink } from "@/lib/site";
 
 export const metadata = {
@@ -50,6 +51,8 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
+
+      <AdsterraBanner />
 
       <section className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
         <div className="grid gap-5 sm:grid-cols-2">

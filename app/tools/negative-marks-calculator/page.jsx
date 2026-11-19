@@ -1,5 +1,6 @@
 import NegativeMarksCalculator from "./NegativeMarksCalculator";
 import AdSlot from "@/components/AdSlot";
+import AdsterraBanner from "@/components/AdsterraBanner";
 import ToolAbout from "@/components/ToolAbout";
 
 export const metadata = {
@@ -21,6 +22,7 @@ export default function Page() {
   return (
     <>
       <NegativeMarksCalculator />
+      <AdsterraBanner />
       <ToolAbout slug="negative-marks-calculator" />
       <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
     </>

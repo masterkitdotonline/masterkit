@@ -1,4 +1,6 @@
+import { Fragment } from "react";
 import Link from "next/link";
+import AdsterraBanner from "@/components/AdsterraBanner";
 
 /**
  * Shared layout for About / Privacy / Terms / Disclaimer.
@@ -20,7 +22,9 @@ export default function LegalPage({ eyebrow, title, intro, updated, sections, ct
       <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="space-y-6">
           {sections.map((s, i) => (
-            <article key={s.h} className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+            <Fragment key={s.h}>
+            {i === Math.floor(sections.length / 2) && <AdsterraBanner className="!my-2" />}
+            <article className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
               <h2 className="flex items-center gap-3 text-xl font-bold text-slate-900 sm:text-2xl">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 text-sm font-bold text-white">
                   {i + 1}
@@ -41,6 +45,7 @@ export default function LegalPage({ eyebrow, title, intro, updated, sections, ct
                 <p key={k} className="mt-4 leading-7 text-slate-600">{t}</p>
               ))}
             </article>
+            </Fragment>
           ))}
         </div>
 

@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import { ArrowRight, Search } from "lucide-react";
 import ToolIcon from "@/components/ToolIcon";
 import AdSlot from "@/components/AdSlot";
+import AdsterraBanner from "@/components/AdsterraBanner";
 import { tools, categories, categoryTheme, themes } from "@/lib/tools";
 
 export default function Tools() {
@@ -46,6 +47,8 @@ export default function Tools() {
           </div>
         </div>
       </section>
+
+      <AdsterraBanner />
 
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="mb-8 flex flex-wrap gap-2">

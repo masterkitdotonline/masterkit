@@ -1,6 +1,7 @@
 
 import CompoundInterestCalculator from "./CompoundInterestCalculator";
 import AdSlot from "@/components/AdSlot";
+import AdsterraBanner from "@/components/AdsterraBanner";
 import ToolAbout from "@/components/ToolAbout";
 
 
@@ -14,6 +15,7 @@ export default function Page() {
   return (
     <>
       <CompoundInterestCalculator />
+      <AdsterraBanner />
       <ToolAbout slug="compound-interest-calculator" />
       <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
     </>

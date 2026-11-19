@@ -1,5 +1,6 @@
 import AreaCalculator from "./AreaCalculator";
 import AdSlot from "@/components/AdSlot";
+import AdsterraBanner from "@/components/AdsterraBanner";
 import ToolAbout from "@/components/ToolAbout";
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function Page() {
   return (
     <>
       <AreaCalculator />
+      <AdsterraBanner />
       <ToolAbout slug="area-calculator" />
       <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
     </>

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { Download, Code2, Search, X } from "lucide-react";
+import AdsterraBanner from "@/components/AdsterraBanner";
 
 
 
@@ -181,6 +182,8 @@ export default function ScriptsGrid() {
           ))}
         </div>
       )}
+
+      <AdsterraBanner className="!mt-10" />
     </section>
   );
 }

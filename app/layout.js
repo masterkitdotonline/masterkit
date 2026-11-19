@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AdsterraBanner from "@/components/AdsterraBanner";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -24,7 +25,7 @@ export const metadata = {
   },
 
   description:
-    "MasterKit offers free online tools including BMI Calculator, Loan Calculator, Percentage Calculator, Image Resizer, Word Counter, JSON Formatter, Text Repeater, Time Table Maker and more.",
+    "MasterKit offers free online tools including BMI Calculator, Loan Calculator, Percentage Calculator, Image Resizer, Word Counter, JSON Formatter, Text Repeater, Etsy Profit Calculator, PayPal Fee Calculator, Subscription Cost Calculator, Hex to Binary Converter, Time Table Maker and more.",
 
   keywords: [
     "free online tools",
@@ -44,7 +45,15 @@ export const metadata = {
     "Text repeater",
     "text repeter",
     "repeat text",
-    "sms repeater"
+    "sms repeater",
+    "Etsy profit calculator",
+    "PayPal fee calculator",
+    "subscription cost calculator",
+    "hex to binary",
+    "hex to binary converter",
+    "hex to binary table",
+    "how to convert hex to binary",
+    "hex to binary conversion"
     
   ],
 
@@ -88,7 +97,8 @@ export const metadata = {
   verification: {
     other: {
       "cpmbid-site-verification": "dd3beca97e9a3851e770c9326a30ba56",
-      "google-site-verification": "fD-C06qtXQ848IiOwYm8fvd_7KGiKsGILCQQF2Dm800"
+      "google-site-verification": "fD-C06qtXQ848IiOwYm8fvd_7KGiKsGILCQQF2Dm800",
+      "monetag": "96c5707e043091bc48638153539976fa",
     },
   },
 };
@@ -130,7 +140,10 @@ export default function RootLayout({ children }) {
      crossorigin="anonymous"></script>
 
         <Header />
+        {/* Adsterra banner #1 (top) – a 2nd one sits above the footer, a 3rd one is placed inside each page */}
+        <AdsterraBanner />
         <main className="flex-1">{children}</main>
+        <AdsterraBanner />
         <Footer />
       </body>
     </html>

@@ -1,6 +1,7 @@
 
 import ImageResizer from "./ImageResizer&Compressor";
 import AdSlot from "@/components/AdSlot";
+import AdsterraBanner from "@/components/AdsterraBanner";
 import ToolAbout from "@/components/ToolAbout";
 
 
@@ -14,6 +15,7 @@ export default function Page() {
   return (
     <>
       <ImageResizer />
+      <AdsterraBanner />
       <ToolAbout slug="image-resizer" />
       <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
     </>
