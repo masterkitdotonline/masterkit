@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AdsterraBanner from "@/components/AdsterraBanner";
+import MonetagAds from "@/components/MonetagAds";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -139,6 +140,7 @@ export default function RootLayout({ children }) {
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5150366301041199"
      crossorigin="anonymous"></script>
 
+        <MonetagAds />
         <Header />
         {/* Adsterra banner #1 (top) – a 2nd one sits above the footer, a 3rd one is placed inside each page */}
         <AdsterraBanner />

@@ -7,8 +7,8 @@ import { usePathname } from "next/navigation";
  * Adsterra 320x50 banner – reusable, use it as many times as you like on a page.
  *
  * Why an iframe? The Adsterra snippet reads a GLOBAL `atOptions` variable, so two banners
- * on the same page would overwrite each other. Each banner here lives in its own iframe
- * (srcDoc) with its own `atOptions`, so 2-3 banners per page work without conflicts.
+ * on the same page would overwrite each other. Each banner lives in its own iframe that loads
+ * /public/ads/banner.html (a real URL on your domain, which Adsterra needs) with its own `atOptions`, so 2-3 banners per page work without conflicts.
  *
  * - Loads lazily (only when the banner is close to the viewport) to keep pages fast.
  * - Re-mounts on every route change, so a new ad is requested per page view.
@@ -19,8 +19,9 @@ import { usePathname } from "next/navigation";
 const DEFAULT_KEY = "0caadee2d1ad7c0ec86600895ea601b9";
 const DEFAULT_SRC = "https://bauval.org/22";
 
-function buildDoc({ adKey, width, height, src }) {
-  return `<!DOCTYPE html><html><head><meta charset="utf-8"><base target="_blank"><style>html,body{margin:0;padding:0;background:transparent;overflow:hidden}body{display:flex;justify-content:center;align-items:center;width:${width}px;height:${height}px}</style></head><body><script>atOptions={'key':'${adKey}','format':'iframe','height':${height},'width':${width},'params':{}};<\/script><script src="${src}/${adKey}"><\/script></body></html>`;
+function buildSrc({ adKey, width, height, src, nonce }) {
+  const q = new URLSearchParams({ k: adKey, w: String(width), h: String(height), s: src, n: nonce });
+  return `/ads/banner.html?${q.toString()}`;
 }
 
 export default function AdsterraBanner({
@@ -78,7 +79,7 @@ export default function AdsterraBanner({
             frameBorder="0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            srcDoc={buildDoc({ adKey, width, height, src })}
+            src={buildSrc({ adKey, width, height, src, nonce: pathname })}
             style={{ border: 0, overflow: "hidden", display: "block" }}
           />
         )}
