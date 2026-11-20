@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import AdsterraBanner from "@/components/AdsterraBanner";
+
 
 /**
  * Shared layout for About / Privacy / Terms / Disclaimer.
@@ -23,7 +23,7 @@ export default function LegalPage({ eyebrow, title, intro, updated, sections, ct
         <div className="space-y-6">
           {sections.map((s, i) => (
             <Fragment key={s.h}>
-            {i === Math.floor(sections.length / 2) && <AdsterraBanner className="!my-2" />}
+            {i === Math.floor(sections.length / 2)}
             <article className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
               <h2 className="flex items-center gap-3 text-xl font-bold text-slate-900 sm:text-2xl">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 text-sm font-bold text-white">

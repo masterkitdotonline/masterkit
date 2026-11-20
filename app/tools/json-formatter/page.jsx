@@ -1,7 +1,6 @@
 
 import JsonFormatterPage from "./JSONFormatter&Validator";
-import AdSlot from "@/components/AdSlot";
-import AdsterraBanner from "@/components/AdsterraBanner";
+
 import ToolAbout from "@/components/ToolAbout";
 
 
@@ -15,9 +14,9 @@ export default function Page() {
   return (
     <>
       <JsonFormatterPage />
-      <AdsterraBanner />
+     
       <ToolAbout slug="json-formatter" />
-      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
+      
     </>
   );
 }

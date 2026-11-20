@@ -1,7 +1,6 @@
 
 import WordCounter from "./WordCounter";
-import AdSlot from "@/components/AdSlot";
-import AdsterraBanner from "@/components/AdsterraBanner";
+
 import ToolAbout from "@/components/ToolAbout";
 
 
@@ -15,9 +14,9 @@ export default function Page() {
   return (
     <>
       <WordCounter />
-      <AdsterraBanner />
+    
       <ToolAbout slug="word-counter" />
-      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
+      
     </>
   );
 }

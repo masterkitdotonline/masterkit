@@ -1,6 +1,5 @@
 import DiscountCalculator from "./DiscountCalculator";
-import AdSlot from "@/components/AdSlot";
-import AdsterraBanner from "@/components/AdsterraBanner";
+
 import ToolAbout from "@/components/ToolAbout";
 
 export const metadata = {
@@ -27,9 +26,9 @@ export default function Page() {
   return (
     <>
       <DiscountCalculator />
-      <AdsterraBanner />
+     
       <ToolAbout slug="discount-calculator" />
-      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
+      
     </>
   );
 }

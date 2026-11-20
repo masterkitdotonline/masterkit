@@ -1,6 +1,5 @@
 import PayPalFeeCalculator from "./PayPalFeeCalculator";
-import AdSlot from "@/components/AdSlot";
-import AdsterraBanner from "@/components/AdsterraBanner";
+
 import ToolAbout from "@/components/ToolAbout";
 
 export const metadata = {
@@ -22,9 +21,9 @@ export default function Page() {
   return (
     <>
       <PayPalFeeCalculator />
-      <AdsterraBanner />
+    
       <ToolAbout slug="paypal-fee-calculator" />
-      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
+      
     </>
   );
 }

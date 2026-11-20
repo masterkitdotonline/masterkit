@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ArrowRight, Search } from "lucide-react";
 import ToolIcon from "@/components/ToolIcon";
-import AdSlot from "@/components/AdSlot";
-import AdsterraBanner from "@/components/AdsterraBanner";
+
 import { tools, categories, categoryTheme, themes } from "@/lib/tools";
 
 export default function Tools() {
@@ -110,7 +109,7 @@ export default function Tools() {
         )}
       </section>
 
-      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOLS} />
+    
     </div>
   );
 }

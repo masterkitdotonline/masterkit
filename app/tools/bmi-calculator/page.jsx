@@ -1,6 +1,5 @@
 import BMICalculator from "./BMICalculator";
-import AdSlot from "@/components/AdSlot";
-import AdsterraBanner from "@/components/AdsterraBanner";
+
 import ToolAbout from "@/components/ToolAbout";
 
 
@@ -14,9 +13,9 @@ export default function Page() {
   return (
     <>
       <BMICalculator />
-      <AdsterraBanner />
+      
       <ToolAbout slug="bmi-calculator" />
-      <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL} />
+     
     </>
   );
 }
