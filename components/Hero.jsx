@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Sparkles, ShieldCheck, Zap, Gift } from "lucide-react";
 import ToolIcon from "@/components/ToolIcon";
 import { popularTools, categoryTheme, themes } from "@/lib/tools";
+import PromoBanner from "./PromoBanner";
 
 const badges = [
   { icon: Gift, label: "100% Free", color: "text-emerald-600 bg-emerald-50" },
@@ -40,6 +41,9 @@ export default function Hero() {
               Free scripts
             </Link>
           </div>
+          {/* <PromoBanner href="https://www.checkout-ds24.com/redir/633270/pcoding91f021/" src="https://i.ibb.co/Q7mH4c8K/Study-Smarter-with-Better-Routines-1.webp" /> */}
+
+          {/* <PromoBanner href="https://www.checkout-ds24.com/redir/633265/pcoding91f021/" src="https://i.ibb.co/FPZcVMq/Essay-Exams-Structure-Before-Writing-1.webp" /> */}
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             {badges.map(({ icon: Icon, label, color }) => (

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import AdsterraBanner from "@/components/AdsterraBanner";
 import MonetagAds from "@/components/MonetagAds";
 import Script from "next/script";
+import PromoBanner from "@/components/PromoBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -143,8 +144,11 @@ export default function RootLayout({ children }) {
         <MonetagAds />
         <Header />
         {/* Adsterra banner #1 (top) – a 2nd one sits above the footer, a 3rd one is placed inside each page */}
+        <PromoBanner href="https://www.checkout-ds24.com/redir/633270/pcoding91f021/" src="https://i.ibb.co/Q7mH4c8K/Study-Smarter-with-Better-Routines-1.webp" />
         <AdsterraBanner />
+        
         <main className="flex-1">{children}</main>
+        <PromoBanner href="https://www.checkout-ds24.com/redir/633265/pcoding91f021/" src="https://i.ibb.co/FPZcVMq/Essay-Exams-Structure-Before-Writing-1.webp" /> 
         <AdsterraBanner />
         <Footer />
       </body>
