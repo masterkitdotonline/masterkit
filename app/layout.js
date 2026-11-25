@@ -44,6 +44,8 @@ export const metadata = {
     "developer tools",
     "SEO tools",
     "Mathkit",
+    "mathkit",
+    
     "Text repeater",
     "text repeter",
     "repeat text",
