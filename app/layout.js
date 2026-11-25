@@ -150,8 +150,7 @@ export default function RootLayout({ children }) {
         
         
         <main className="flex-1">{children}</main>
-        <PromoBanner href="https://www.checkout-ds24.com/redir/633265/pcoding91f021/" src="https://i.ibb.co/FPZcVMq/Essay-Exams-Structure-Before-Writing-1.webp" /> 
-        <PromoBanner href="https://www.checkout-ds24.com/redir/633270/pcoding91f021/" src="https://i.ibb.co/Q7mH4c8K/Study-Smarter-with-Better-Routines-1.webp" />
+        
         
         <Footer />
       </body>

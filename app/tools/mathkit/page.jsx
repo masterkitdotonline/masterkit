@@ -6,7 +6,7 @@ export const metadata = {
   title: "MathKit - Free Online Math Toolkit & Scientific Calculator",
   description:
     "MathKit is a free all-in-one math toolkit: scientific calculator, powers and roots, GCD and LCM, prime factors, factorial, quadratic equation solver and statistics calculator.",
-  keywords: ["MathKit", "mathkit" , "mathkit calculator", "mathkit.online", "mathkit scientific calculator", "mathkit - online calculator", "mathkit online calculator", "math toolkit","scientific calculator online","math calculator","GCD LCM calculator","HCF calculator","prime factorization calculator","quadratic equation solver","factorial calculator","square root calculator","cube root calculator","standard deviation calculator","mean median mode calculator","trigonometry calculator","log calculator"],
+  keywords: ["MathKit", "mathkit" , "mathkit calculator",  "mathkit online calculator", "math toolkit","scientific calculator online","math calculator","GCD LCM calculator","HCF calculator","prime factorization calculator","quadratic equation solver","factorial calculator","square root calculator","cube root calculator","standard deviation calculator","mean median mode calculator","trigonometry calculator","log calculator"],
   alternates: { canonical: "https://masterkit.online/tools/mathkit" },
   openGraph: {
     title: "MathKit - Free Online Math Toolkit & Scientific Calculator | MasterKit",
